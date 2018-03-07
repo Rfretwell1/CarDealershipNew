@@ -9,26 +9,43 @@ namespace CarClassLibrary
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public bool Repair { get; set; }
+        public int MaintenanceID { get; set; }
 
-        public bool Valid(string Description,string Cost, string MntDate)
+        public string Valid(string Description,string Cost, string MntDate)
         {
-            bool OK = true;
+            string Error = "";
             if (Description == "")
             {
-                OK = false;
+                Error = Error + "description may not be blank ";
+            }
+            if (Description.Length > 50)
+            {
+                Error = Error + "description 50 characters or less ";
             }
 
-            if(Cost == "")
+            if (Cost == "")
             {
-                OK = false;
+                Error = Error + "cost may not be blank ";
             }
+            if (Cost.Length > 50)
+            {
+                Error = Error + "cost 50 characters or less ";
+            }
+
 
             if (MntDate == "")
             {
-                OK = false;
+                Error = Error + "date may not be blank ";
             }
+            return Error;
+        }
 
-            return OK;
+        public bool Find(int Maintenance)
+        {
+            //Set the pritvate data member to the set data value
+            MaintenanceID = 12;
+            //alwyas return true 
+            return true;
         }
 
      

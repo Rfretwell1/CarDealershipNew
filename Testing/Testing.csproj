@@ -54,6 +54,7 @@
     <Compile Include="tstCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstMaintenance.cs" />
+    <Compile Include="tstMaintenanceCollection.cs" />
     <Compile Include="tstPayment.cs" />
   </ItemGroup>
   <ItemGroup>
