@@ -4,9 +4,23 @@ using CarClassLibrary;
 
 namespace Testing
 {
+
+
+
+
     [TestClass]
     public class tstCustomer
     {
+
+        //test data values
+        string FirstName = "fred";
+        string LastName = "bloggs";
+        string Address = "some street";
+        string PostCode = "LE1 123";
+        string DateAdded = DateTime.Now.Date.ToString();
+        string EmailAddress = "bob@bob.com";
+        string PhoneNumber = "0116 1234567";
+
         [TestMethod]
         public void InstanceOk()
         {
@@ -134,19 +148,18 @@ namespace Testing
         }
 
         [TestMethod]
-        public void FirstNameMisLessOne()
+        public void FirstNameMinLessOne()
         {
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "";
+            FirstName = "";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.IsFalse(OK);
-
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -155,13 +168,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "a";
+            FirstName = "a";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
 
         }
 
@@ -171,13 +184,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "aa";
+            FirstName = "aa";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -186,13 +199,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            FirstName = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -201,13 +214,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            FirstName = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -216,13 +229,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            FirstName = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -231,13 +244,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcde";
+            FirstName = "abcdefghijabcdefghijabcde";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -246,15 +259,15 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "";
+            FirstName = "";
             //pad the string with a charcaters
-            SomeCustomer = SomeCustomer.PadRight(500, 'a');
+            FirstName = FirstName.PadRight(500, 'a');
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -263,13 +276,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "";
+            FirstName = "";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
 
         }
 
@@ -279,13 +292,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "a";
+            LastName = "a";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
 
         }
 
@@ -295,13 +308,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "aa";
+            LastName = "aa";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -310,13 +323,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            LastName = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -325,13 +338,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            LastName = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -340,13 +353,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            LastName = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -355,13 +368,13 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "abcdefghijabcdefghijabcde";
+            LastName = "abcdefghijabcdefghijabcde";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -370,15 +383,15 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "";
+            LastName = "";
             //pad the string with a charcaters
-            SomeCustomer = SomeCustomer.PadRight(500, 'a');
+            LastName = LastName.PadRight(500, 'a');
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -387,15 +400,562 @@ namespace Testing
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign the property
-            string SomeCustomer = "";
+            EmailAddress = "";
             //invoke the method
-            OK = AnCustomer.Valid(SomeCustomer);
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
 
         }
+
+        [TestMethod]
+        public void EmailAddressMisLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error,"");
+
+        }
+
+        [TestMethod]
+        public void EmailAddressMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "a";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error,"");
+
+        }
+
+        [TestMethod]
+        public void EmailAddressMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "aa";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void EmailAddressMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void EmailAddressMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void EmailAddressMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void EmailAddressMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "abcdefghijabcdefghijabcde";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void EmailAddressExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            EmailAddress = "";
+            //pad the string with a charcaters
+            EmailAddress = EmailAddress.PadRight(500, 'a');
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error,"");
+        }
+
+        [TestMethod]
+        public void AddressMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void AddressMisLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void AddressMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "a";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void AddressMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "aa";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AddressMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AddressMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AddressMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+           Address = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AddressMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "abcdefghijabcdefghijabcde";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void AddressExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            Address = "";
+            //pad the string with a charcaters
+            Address = Address.PadRight(500, 'a');
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void PostCodeLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PostCodeMidLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PostCodeMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "a";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PostCodeMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "aa";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostCodeMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostCodeMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostCodeMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostCodeMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "abcdefghijabcdefghijabcde";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostCodeExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PostCode = "";
+            //pad the string with a charcaters
+            PostCode = PostCode.PadRight(500, 'a');
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PhoneNumberMisLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PhoneNumberMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "a";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PhoneNumberMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "aa";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "abcdeafghijabcdefghijabcdefghijabcdefghijabcdefghi";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "abcdefghijabcdefghijabcde";
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNumberExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property
+            PhoneNumber = "";
+            //pad the string with a charcaters
+            PhoneNumber = Address.PadRight(500, 'a');
+            //invoke the method
+            Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        
     }
 
 
