@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="clsCar.cs" />
     <Compile Include="clsCustomer.cs" />
-    <Compile Include="clsCustomerCollection.cs" />
     <Compile Include="clsMaintenance.cs" />
     <Compile Include="clsPayment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
