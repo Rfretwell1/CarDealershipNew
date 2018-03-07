@@ -17,24 +17,85 @@ namespace CarClassLibrary
         public string PhoneNumber { get;  set; }
         public string PostCode { get;  set; }
 
-        public bool Valid(string SomeCustomer)
+        public string Valid(string FirstName, string LastName, string Address, string PostCode, string DateAdded, string EmailAddress, string PhoneNumber)
         {
             //boolean flag to indictate that all is ok();
-            Boolean OK = true;
+            string Error = "";
             //if the name of the county is blank
-            if (SomeCustomer == "")
+            if (FirstName == "")
             {
                 //flag an error
-                OK = false;
+                Error = Error + "First name cannot be blank ";
             }
 
             //if the name of the customer is more than 50 characters
-            if (SomeCustomer.Length > 50)
+            if (FirstName.Length > 50)
             {
                 //flag an error
-                OK = false;
+                Error = Error + "First name cannot be more than 50 characters ";
             }
-            return OK;
+
+            if (LastName == "")
+            {
+                //flag an error
+                Error = Error + "Last name cannot be blank ";
+            }
+
+            //if the name of the customer is more than 50 characters
+            if (LastName.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Last name cannot be more than 50 characters ";
+            }
+
+            if (EmailAddress =="")
+            {
+                //flag an error
+                Error = Error + "Email Address cannot be blank";
+            }
+            //if the email address of the customer is more than 50 characters
+            if (EmailAddress.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Email Address cannot be more than 50 characters";
+            }
+
+            if (Address == "")
+            {
+                //flag an error
+                Error = Error + "Address cannot be blank";
+            }
+            //if the email address of the customer is more than 50 characters
+            if (Address.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Address cannot be more than 50 characters";
+            }
+
+            if (PostCode == "")
+            {
+                //flag an error
+                Error = Error + "Post Code cannot be blank";
+            }
+            //if the email address of the customer is more than 50 characters
+            if (PostCode.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Post Code cannot be more than 50 characters";
+            }
+
+            if (PhoneNumber == "")
+            {
+                //flag an error
+                Error = Error + "Post Code cannot be blank and must be all digits e.g '07123456789'";
+            }
+            //if the email address of the customer is more than 50 characters
+            if (PhoneNumber.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Phone Number cannot be more than 50 characters";
+            }
+            return Error;
         }
     }
 }
