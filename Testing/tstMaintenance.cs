@@ -29,6 +29,19 @@ namespace tstMaintenance
         }
 
         [TestMethod]
+        public void MaintenanceIDPropertyOk()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AnMaintenance = new clsMaintenance();
+            //create some test data to assign to the property
+            Boolean testData = true;
+            //assign the data to the property 
+            AnMaintenance.Active = testData;
+            //test to see that that two values are the same 
+            Assert.AreEqual(AnMaintenance.Active, testData);
+        }
+
+        [TestMethod]
         public void RepairIDPropertyOk()
         {
             //create an instance of the class we want to create
@@ -62,15 +75,16 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign to the property 
             string TestDescription = "";
+            TestDescription = TestDescription.PadRight('a');
             string TestCost="1.00";
             string TestDate=DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription,TestCost,TestDate);
+            Error = AMaitenance.Valid(TestDescription,TestCost,TestDate);
             //test to see that the result is correct 
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -79,14 +93,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
-            string TestDescription = "a";
+            string Error = "";
+            string TestDescription = "";
+            TestDescription = TestDescription.PadRight(1, 'a');
             string TestCost = "1.00";
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -95,14 +110,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
-            string TestDescription = "aa";
+            string Error = "";
+            string TestDescription = "";
+            TestDescription = TestDescription.PadRight(2, 'a');
             string TestCost = "1.00";
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -111,14 +127,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
-            string TestDescription = "aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaa";
+            string Error = "";
+            string TestDescription="";
+            TestDescription = TestDescription.PadRight(49, 'a');
             string TestCost = "1.00";
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -127,14 +144,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
-            string TestDescription = "aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa";
+            string Error = "";
+            string TestDescription = "";
+            TestDescription = TestDescription.PadRight(50, 'a');
             string TestCost = "1.00";
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -143,14 +161,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
-            string TestDescription = "aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa";
+            string Error = "";
+            string TestDescription = "";
+            TestDescription = TestDescription.PadRight(51, 'a');
             string TestCost = "1.00";
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
 
@@ -178,15 +197,16 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             //create some test data to assign to the property 
             string TestDescription = "a";
             string TestCost = "";
+            TestCost = TestCost.PadRight('a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsFalse(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
         [TestMethod]
@@ -195,14 +215,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             string TestDescription = "a";
-            string TestCost = "1";
+            string TestCost = "";
+            TestCost = TestCost.PadRight(1, 'a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -211,14 +232,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             string TestDescription = "a";
-            string TestCost = "11";
+            string TestCost = "";
+            TestCost = TestCost.PadRight(2, 'a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -227,14 +249,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             string TestDescription = "a";
-            string TestCost = "1111111111 1111111111 1111111111 1111111111 111111111";
+            string TestCost = "";
+            TestCost = TestCost.PadRight(49, 'a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -243,14 +266,15 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             string TestDescription = "a";
-            string TestCost = "1111111111 1111111111 1111111111 1111111111 1111111111";
+            string TestCost = "";
+            TestCost = TestCost.PadRight(50, 'a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreEqual(Error,"");
         }
 
         [TestMethod]
@@ -259,18 +283,19 @@ namespace tstMaintenance
             //create an instance of the class we want to create
             clsMaintenance AMaitenance = new clsMaintenance();
             //boolean variable to store the results of the vaildation 
-            Boolean OK = false;
+            string Error = "";
             string TestDescription = "a";
-            string TestCost = "1111111111 1111111111 1111111111 1111111111 11111111111";
+            string TestCost = "";
+            TestCost = TestCost.PadRight(51, 'a');
             string TestDate = DateTime.Now.Date.ToString();
             //invoke the method 
-            OK = AMaitenance.Valid(TestDescription, TestCost, TestDate);
+            Error = AMaitenance.Valid(TestDescription, TestCost, TestDate);
             //test to see that the result is correct 
-            Assert.IsTrue(OK);
+            Assert.AreNotEqual(Error,"");
         }
 
 
-//Date Test 
+        //Date Test 
 
         [TestMethod]
         public void DatePropertyOk()
@@ -284,6 +309,48 @@ namespace tstMaintenance
             //test to see that that two values are the same 
             Assert.AreEqual(AnMaintenance.Date, testData);
         }
+
+//find method
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an insatnce of nthe class we want to create
+            clsMaintenance anMaintenance = new clsMaintenance();
+            //boolean variable to store the seslut of the vaildation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 MaintenanceNo = 1;
+            //invoke the method
+            Found = anMaintenance.Find(MaintenanceNo);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestMaintenanceIDFound()
+        {
+            //create an instance of the class 
+            clsMaintenance anMaintenance = new clsMaintenance();
+            //boolean varialbe to store the result 
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean Ok = true;
+            //create some test data to use with method
+            Int32 MaintenanceID = 12;
+            //invoke the method
+            Found = anMaintenance.Find(MaintenanceID);
+            //check the maintenance
+            if (anMaintenance.MaintenanceID != 12)
+                {
+                Ok = false;
+               }
+            //test to see that the resuts is correct 
+            Assert.IsTrue(Ok);
+          
+        }
+
+       
 
     }
 }
