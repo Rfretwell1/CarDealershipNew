@@ -28,7 +28,7 @@ namespace CarTest
             //test to see that the two values are the same
             Assert.AreEqual(ACar.Active, TestData);
 
-        
+
         }
         [TestMethod]
         public void AgeOk()
@@ -36,7 +36,7 @@ namespace CarTest
             //create an isntance of the class we want to create
             clsCar ACar = new clsCar();
             //create some test data to assaign to the property
-            DateTime TestData = DateTime.Now.Date;
+            int TestData = 30;
             //assign the data to the property
             ACar.Age = TestData;
             //test to see that the two values are the same
@@ -50,7 +50,7 @@ namespace CarTest
             //create an isntance of the class we want to create
             clsCar ACar = new clsCar();
             //create some test data to assaign to the property
-            String TestData =  "Sedan";
+            String TestData = "Sedan";
             //assign the data to the property
             ACar.BodyType = TestData;
             //test to see that the two values are the same
@@ -88,7 +88,7 @@ namespace CarTest
         }
 
         [TestMethod]
-        public void Colour()
+        public void ColourOk()
         {
             //create an isntance of the class we want to create
             clsCar ACar = new clsCar();
@@ -101,7 +101,54 @@ namespace CarTest
 
 
         }
+        [TestMethod]
+
+        public void MileageOK()
+        {
+            //create an isntance of the class we want to create
+            clsCar ACar = new clsCar();
+            //create some test data to assign to the property
+            Int32 TestData = 100000;
+            //Assign the data to the property
+            ACar.Mileage = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACar.Mileage, TestData);
+
+
+        }
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCar ACar = new clsCar();
+            //booleon variable to store teh result of the validation
+            Boolean OK = false;
+            //create some test data to assign to the property
+            string SomeCar = "T-Type";
+            //invoke the method
+            OK = ACar.Valid(SomeCar);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CarModelMinLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validatin
+            Boolean OK = false;
+            //create some data to assign to the property
+            string SomeCarModel = "aaa";
+            //invoke the method
+            OK = ACar.Valid(SomeCarModel);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+
+        }
 
     }
-
 }
+
+
+
+  
