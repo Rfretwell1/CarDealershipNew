@@ -40,17 +40,17 @@ namespace CarTest
         [TestMethod]
         public void AgeOk()
         {
-            //create an isntance of the class we want to create
-            clsCar ACar = new clsCar();
-            //create some test data to assaign to the property
-            int TestData = 30;
-            //assign the data to the property
-            ACar.Age = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(ACar.Age, TestData);
+        //create an isntance of the class we want to create
+        clsCar ACar = new clsCar();
+        //create some test data to assaign to the property
+        int TestData = 30;
+        //assign the data to the property
+        ACar.Age = TestData;
+        //test to see that the two values are the same
+        Assert.AreEqual(ACar.Age, TestData);
 
 
-        }
+        //}
         [TestMethod]
         public void BodyTypeOk()
         {
@@ -123,7 +123,7 @@ namespace CarTest
 
 
         }
-        [TestMethod]
+       [TestMethod]
         public void ValidMethodOK()
         {
             //create an instance of the class we want to create
@@ -135,6 +135,7 @@ namespace CarTest
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
         }
+ JackWalsh
         [TestMethod]
         public void CarModelMinLessOne()
         {
@@ -316,6 +317,9 @@ namespace CarTest
     
         }
 
+
+
+ master
 
     }
 }
