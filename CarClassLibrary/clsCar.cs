@@ -43,7 +43,7 @@ namespace CarTest
                     //flag an error
                     Error = Error + "Car make may not be greater than 10 characters ";
                 }
-                return Error;
+                return Error;//
             }
         }
     }
