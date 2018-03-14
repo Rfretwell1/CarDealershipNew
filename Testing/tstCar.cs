@@ -10,10 +10,10 @@ namespace CarTest
     {
         string CarModel = "T-Type";
         string CarMake = "Jaguar";
-        string Colour="red";
-        string Milage="1000";
-        string BodyType="coupe";
-        string Age="10";
+        string Colour = "red";
+        string Milage = "1000";
+        string BodyType = "coupe";
+        string Age = "10";
 
         [TestMethod]
         public void InstanceOk()
@@ -131,7 +131,7 @@ namespace CarTest
             //booleon variable to store teh result of the validation
             string Error = "";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake,Colour,Milage,BodyType,Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -261,7 +261,7 @@ namespace CarTest
             //create an instance of the class we want 
             clsCar ACar = new clsCar();
             //booleon variable to store the result of the validation
-            string Error="";
+            string Error = "";
             //create some data to assign to the property
             string CarMake = "jkjkjk";
             //invoke the method
@@ -299,6 +299,21 @@ namespace CarTest
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
+        }
+        [TestMethod]
+        public void ColourMinLessOne()
+        {
+           //create an instance of the class we want 
+           clsCar ACar = new clsCar();
+           //booleon variable to store the result of the validation
+           string Error = "";
+           //create some data to assign to the property
+           string Colour = "jk";
+           //invoke the method
+           Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+           //test to see if the result is correct
+           Assert.AreNotEqual(Error, "");
+    
         }
 
 

@@ -43,7 +43,21 @@ namespace CarTest
                     //flag an error
                     Error = Error + "Car make may not be greater than 10 characters ";
                 }
+                //Colour is less than 3
+                if (Colour.Length < 3)
+                {
+                    Error = Error + "Colour may not be less than 3 characters";
+                
+                }
+                //Colour is less than 3
+                if (Colour.Length > 9)
+                {
+                    Error = Error + "Colour must not be more than 9 characters";
+
+                }
+
                 return Error;
+                
             }
         }
     }
