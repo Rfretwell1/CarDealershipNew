@@ -140,7 +140,7 @@ namespace tstPayment
         }
 
         [TestMethod]
-        public void TestEmployeeNoFound()
+        public void TestPaymentNoFound()
         {
             //create an instance of the class we want to create 
             clsPayment AnPayment = new clsPayment();
@@ -162,6 +162,27 @@ namespace tstPayment
             Assert.IsTrue(OK);
         }
 
+        [TestMethod]
+        public void TestCarIDFound()
+        {
+            //create an instance of the class we want to create 
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is) 
+            Boolean OK = true;
+            //create some test data to use with the method 
+            Int32 PaymentNo = 21;
+            //invoke the method 
+            Found = AnPayment.Find(PaymentNo);
+            //check the Property
+            if (AnPayment.CarID != "Test CarID")
+            {
+                OK = false;
+            }
+            //test to see that the result is correctr 
+            Assert.IsTrue(OK);
+        }
 
     }
 }
