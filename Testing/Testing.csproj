@@ -60,6 +60,7 @@
     <Compile Include="tstMaintenance.cs" />
     <Compile Include="tstMaintenanceCollection.cs" />
     <Compile Include="tstPayment.cs" />
+    <Compile Include="tstEmployeeCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarClassLibrary\CarClassLibrary.csproj">
