@@ -7,6 +7,49 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarClassLibrary", "CarClassLibrary\CarClassLibrary.csproj", "{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarDelearship", "CarDelearship\", "{CBB47335-8311-41FA-B316-4FCBAA26BF41}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52725"
+		Debug.AspNetCompiler.PhysicalPath = "CarDelearship\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52725\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52725"
+		Release.AspNetCompiler.PhysicalPath = "CarDelearship\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52725\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52725"
+		SlnRelativePath = "CarDelearship\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Employee Portal", "I:\Car Dealership\Employee Portal\", "{9E0713ED-3B73-4215-B3D1-662B2EB5C8DB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52763"
+		Debug.AspNetCompiler.PhysicalPath = "I:\Car Dealership\Employee Portal\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52763\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52763"
+		Release.AspNetCompiler.PhysicalPath = "I:\Car Dealership\Employee Portal\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52763\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52763"
+		SlnRelativePath = "I:\Car Dealership\Employee Portal\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +64,14 @@ Global
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB47335-8311-41FA-B316-4FCBAA26BF41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB47335-8311-41FA-B316-4FCBAA26BF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB47335-8311-41FA-B316-4FCBAA26BF41}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB47335-8311-41FA-B316-4FCBAA26BF41}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E0713ED-3B73-4215-B3D1-662B2EB5C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0713ED-3B73-4215-B3D1-662B2EB5C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0713ED-3B73-4215-B3D1-662B2EB5C8DB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0713ED-3B73-4215-B3D1-662B2EB5C8DB}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
