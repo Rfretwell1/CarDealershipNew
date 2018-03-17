@@ -50,7 +50,7 @@ namespace CarTest
         Assert.AreEqual(ACar.Age, TestData);
 
 
-        //}
+        }
         [TestMethod]
         public void BodyTypeOk()
         {
@@ -135,7 +135,7 @@ namespace CarTest
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
         }
- JackWalsh
+
         [TestMethod]
         public void CarModelMinLessOne()
         {
@@ -205,6 +205,42 @@ namespace CarTest
             string Error = "";
             //create some data to assign to the property
             string CarModel = "jkjkjkjkjkjjkjk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CarModelMid()
+        {
+
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string CarModel = "jkjkjkj";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+
+
+        }
+        [TestMethod]
+        public void CarModelExtremeMax()
+        {
+
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string CarModel = "";
+            //pad the string with characters
+            CarModel = CarModel.PadRight(50, 'a');
             //invoke the method
             Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
             //test to see if the result is correct
@@ -302,6 +338,22 @@ namespace CarTest
 
         }
         [TestMethod]
+        public void CarMakeMid()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string CarMake = "jkj";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
         public void ColourMinLessOne()
         {
            //create an instance of the class we want 
@@ -319,7 +371,7 @@ namespace CarTest
 
 
 
- master
+
 
     }
 }
