@@ -11,7 +11,7 @@ namespace CarTest
         string CarModel = "T-Type";
         string CarMake = "Jaguar";
         string Colour = "red";
-        string Milage = "1000";
+        string Mileage = "1000";
         string BodyType = "coupe";
         string Age = "10";
 
@@ -131,7 +131,7 @@ namespace CarTest
             //booleon variable to store teh result of the validation
             string Error = "";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -146,7 +146,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "aa";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -161,7 +161,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "aaaaa";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -176,7 +176,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "jkjkjkjkjkjj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -191,7 +191,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "jkjkjkjkjkjjkj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -206,7 +206,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "jkjkjkjkjkjjkjk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -222,7 +222,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarModel = "jkjkjkj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -242,7 +242,7 @@ namespace CarTest
             //pad the string with characters
             CarModel = CarModel.PadRight(50, 'a');
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreNotEqual(Error, "");
 
@@ -257,7 +257,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarMake = "jkjkj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -270,9 +270,9 @@ namespace CarTest
             //booleon variable to store the result of the validation
             string Error = "";
             //create some data to assign to the property
-            string CarMake = "jkjkjk";
+            string CarMake = "jkjkj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -285,9 +285,9 @@ namespace CarTest
             //booleon variable to store the result of the validation
             string Error = "";
             //create some data to assign to the property
-            string CarMake = "jkjkj";
+            string CarMake = "jkjkjk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -302,7 +302,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarMake = "jkjkjk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -317,7 +317,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarMake = "jkjkjk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -332,7 +332,7 @@ namespace CarTest
             //create some data to assign to the property
             string CarMake = "jkjkjk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
@@ -345,13 +345,31 @@ namespace CarTest
             //booleon variable to store the result of the validation
             string Error = "";
             //create some data to assign to the property
-            string CarMake = "jkj";
+            string CarMake = "jkjkjkj";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreEqual(Error, "");
 
         }
+        [TestMethod]
+        public void CarMakeExtremeMax()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string CarMake = "";
+            //pad the data
+            CarMake = CarMake.PadRight(500, 'a');
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
 
         [TestMethod]
         public void ColourMinLessOne()
@@ -363,21 +381,373 @@ namespace CarTest
             //create some data to assign to the property
             string Colour = "jk";
             //invoke the method
-            Error = ACar.Valid(CarModel, CarMake, Colour, Milage, BodyType, Age);
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void ColourMinBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void ColourMinPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
             //test to see if the result is correct
             Assert.AreNotEqual(Error, "");
 
         }
 
-
-
-
-
-
+        [TestMethod]
+        public void ColourMaxLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
 
         }
+
+        [TestMethod]
+        public void ColourMaxBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourMaxPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourMid()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ColourExtremeMax()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Colour = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void MileageMinlessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void MileageMinBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "1";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageMinPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "2";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageMaxLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "299999";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageMaxBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "300000";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageMaxPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "3000011";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageMid()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "150000";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void MileageExtremeMax()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Mileage = "";
+            //pad the data 
+            Mileage = Mileage.PadRight(10, '1');
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMinLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void BodyTypeMinBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkj";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMinPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkjj";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMaxLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkjkjkjkjkjk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMaxBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkjkjkjkjkjk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMaxPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkjkjkjkjkjkjk";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeMid()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "jkjkjkj";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void BodyTypeExtremeMax()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string BodyType = "";
+            //pad the data 
+            BodyType = BodyType.PadRight(50, 'j');
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+            //
+        }
+
+
     }
 }
+
 
 
 
