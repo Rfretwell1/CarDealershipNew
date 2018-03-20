@@ -44,15 +44,15 @@ namespace CarTest
                     Error = Error + "Car make may not be greater than 10 characters ";
                 }
                 //Age is less 0 
-                if (Age.Length < 0)
+                if (Age.Length < 1)
                 {
-                    Error = Error + "Age should not be less than 0";
+                    Error = Error + "Age should not be 0";
                 
                 }
                 //Age is greater than 20
-                if (Age.Length > 20)
+                if (Age.Length > 2)
                 {
-                    Error = Error + "Age should not be greater than 20";
+                    Error = Error + "Age should not be greater than 99";
                 }
                 //Colour is less than 3
                 if (Colour.Length < 3)

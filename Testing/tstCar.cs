@@ -743,7 +743,129 @@ namespace CarTest
             Assert.AreNotEqual(Error, "");
             //
         }
+        [TestMethod]
+        public void AgeMinlessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
 
+        }
+
+        [TestMethod]
+        public void AgeMinBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "1";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeMinPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "2";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeMaxLessOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "98";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeMaxBoundry()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "99";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeMaxPlusOne()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "100";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeMid()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "50";
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void AgeExtremeMax()
+        {
+            //create an instance of the class we want 
+            clsCar ACar = new clsCar();
+            //booleon variable to store the result of the validation
+            string Error = "";
+            //create some data to assign to the property
+            string Age = "";
+            //pad the data 
+            Mileage = Mileage.PadRight(10, '1');
+            //invoke the method
+            Error = ACar.Valid(CarModel, CarMake, Colour, Mileage, BodyType, Age);
+            //test to see if the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
 
     }
 }
