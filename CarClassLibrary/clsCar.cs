@@ -1,17 +1,49 @@
 ﻿using System;
+using CarClassLibrary;
 
 namespace CarTest
 {
     public class clsCar
     {
-        public bool Active { get;  set; }
+        public bool Active { get; set; }
         public int Age { get; set; }
-        public string BodyType { get;  set; }
-        public string CarMake { get;  set; }
-        public string CarModel { get;  set; }
-        public string Colour { get;  set; }
+        public string BodyType { get; set; }
+        public string CarMake { get; set; }
+        public string CarModel { get; set; }
+        public string Colour { get; set; }
         public int Mileage { get; set; }
-
+    
+        public bool Find(string CarMake)
+      
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the address no to search for
+            DB.AddParameter("@CarMake", CarMake);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCar_FilterByCarMake");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+            //copy the data from the database to the private data members
+            Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+            Age = Convert.ToInt32(DB.DataTable.Rows[0]["HouseNo"]);
+            BodyType = Convert.ToString(DB.DataTable.Rows[0]["Street"]);
+            CarMake = Convert.ToString(DB.DataTable.Rows[0]["Town"]);
+            CarModel = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+            Colour = Convert.ToString(DB.DataTable.Rows[0]["CountyNo"]);
+            Mileage = Convert.ToInt32(DB.DataTable.Rows[0]["DateAdded"]);
+            
+            //return that everything worked OK
+            return true;
+            }
+            //if no record was found
+            else
+            {
+            //return false indicating a problem
+            return false;
+            }
+        }
         public string Valid(string CarModel, string CarMake,string Colour, string Mileage,string BodyType, string Age)
         {
             {
