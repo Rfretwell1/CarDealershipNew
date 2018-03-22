@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarClassLibrary", "CarClassLibrary\CarClassLibrary.csproj", "{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{3D32973F-925C-4E53-B535-497A40341337}"
+	ProjectSection(SolutionItems) = preProject
+		AppData\CarBook.mdf = AppData\CarBook.mdf
+		AppData\CarBook_log.ldf = AppData\CarBook_log.ldf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{8C25DCCD-8DD0-4656-9F02-96A2995B9469}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\Class Library.dll = Bin\Class Library.dll
+		Bin\Class Library.pdb = Bin\Class Library.pdb
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

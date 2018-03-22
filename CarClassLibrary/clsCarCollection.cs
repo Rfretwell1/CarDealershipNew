@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarClassLibrary
 {
-    class clsCarCollection
+    public class clsCarCollection
     {
         //private data member for the list
         List<clsCar> mCarList = new List<clsCar>();
@@ -143,7 +143,19 @@ namespace CarClassLibrary
 
 
         }
-   
+
+        public void FilterByCarMake(string CarMake)
+        {
+            //filters the records based on a full or partial post code
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the PostCode parameter to the database
+            DB.AddParameter("@CarMake", CarMake);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_FilterByCarMake");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
 
     }
 
