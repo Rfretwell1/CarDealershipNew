@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarClassLibrary
 {
-    class clsCarCollection
+    public class clsCarCollection
     {
         //private data member for the list
         List<clsCar> mCarList = new List<clsCar>();
@@ -38,16 +38,16 @@ namespace CarClassLibrary
             //while there are records to process
             while (Index < RecordCount)
             {
-                //create a blank address
+                //create a blank Car
                 clsCar AnCar = new clsCar();
                 //read in the fields from the current record
                 AnCar.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
-                AnCar.CarMake = Convert.ToString(DB.DataTable.Rows[Index]["AddressNo"]);
-                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CountyNo"]);
-                AnCar.Colour = Convert.ToString(DB.DataTable.Rows[Index]["DateAdded"]);
-                AnCar.Mileage = Convert.ToInt32(DB.DataTable.Rows[Index]["HouseNo"]);
-                AnCar.Age = Convert.ToInt32(DB.DataTable.Rows[Index]["PostCode"]);
-                AnCar.BodyType = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
+                AnCar.CarMake = Convert.ToString(DB.DataTable.Rows[Index]["CarMake"]);
+                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
+                AnCar.Colour = Convert.ToString(DB.DataTable.Rows[Index]["Colour"]);
+                AnCar.Mileage = Convert.ToInt32(DB.DataTable.Rows[Index]["Mileage"]);
+                AnCar.Age = Convert.ToInt32(DB.DataTable.Rows[Index]["Age"]);
+                AnCar.BodyType = Convert.ToString(DB.DataTable.Rows[Index]["BodyTYpe"]);
                 //add the record to the private data mamber
                 mCarList.Add(AnCar);
                 //point at the next record
@@ -55,6 +55,108 @@ namespace CarClassLibrary
             }
 
         }
+        //Public property for the Car list
+              public List<clsCar> CarList
+        {
+              get
+            {
+                //return the private data
+                return mCarList;
+            }
+            set
+            {
+                //set the private data
+                mCarList = value;
+            }
+        }
+
+        //Public property for count
+        public int Count
+        {    
+            get
+            {
+                //return the count of the list
+                return mCarList.Count;
+            }
+            set
+            {
+                //we shall worry about this later
+            }
+        }
+
+        //Public property for This Car
+        public clsCar ThisCar
+        {
+            get
+            {
+                //return the private data
+                return mThisCar;
+            }
+            set
+            {
+                //set the private data
+                mThisCar = value;
+            }
+        }
+        public int Add()
+        {
+            //Add a new record to the database based on the value thisCar
+            //Connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@Active", mThisCar.Active);
+            DB.AddParameter("@CarMake", mThisCar.CarMake);
+            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            DB.AddParameter("@Colour", mThisCar.Colour);
+            DB.AddParameter("@Age", mThisCar.Age);
+            DB.AddParameter("@BodyType", mThisCar.BodyType);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblCar_Insert");
+
+
+        }
+        public void Delete()
+        {
+            //deletes the record pointed to by thisCar
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_Delete");
+        }
+
+        public int Update()
+        {
+            //Update an existing record in the database based on the value thisCar
+            //Connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@Active", mThisCar.Active);
+            DB.AddParameter("@CarMake", mThisCar.CarMake);
+            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            DB.AddParameter("@Colour", mThisCar.Colour);
+            DB.AddParameter("@Age", mThisCar.Age);
+            DB.AddParameter("@BodyType", mThisCar.BodyType);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblCar_Update");
+
+
+        }
+
+        public void FilterByCarMake(string CarMake)
+        {
+            //filters the records based on a full or partial post code
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the PostCode parameter to the database
+            DB.AddParameter("@CarMake", CarMake);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_FilterByCarMake");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
     }
 
 }
