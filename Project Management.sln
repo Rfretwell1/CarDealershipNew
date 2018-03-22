@@ -19,6 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{8C25DCCD-8DD
 		Bin\Class Library.pdb = Bin\Class Library.pdb
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AB751EA6-8531-4935-A5E3-354E2B1A82D8}"
+	ProjectSection(SolutionItems) = preProject
+		AppData\CarBook.mdf = AppData\CarBook.mdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
