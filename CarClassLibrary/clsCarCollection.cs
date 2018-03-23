@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CarClassLibrary
 {
@@ -104,11 +104,13 @@ namespace CarClassLibrary
             //Connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
+            DB.AddParameter("@CarNo", mThisCar.Active);
             DB.AddParameter("@Active", mThisCar.Active);
             DB.AddParameter("@CarMake", mThisCar.CarMake);
             DB.AddParameter("@CarModel", mThisCar.CarModel);
             DB.AddParameter("@Colour", mThisCar.Colour);
             DB.AddParameter("@Age", mThisCar.Age);
+            DB.AddParameter("@Mileage", mThisCar.Mileage);
             DB.AddParameter("@BodyType", mThisCar.BodyType);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblCar_Insert");

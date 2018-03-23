@@ -6,6 +6,7 @@ namespace CarTest
     public class clsCar
     {
         public bool Active { get; set; }
+        public int CarNo { get; set; }
         public int Age { get; set; }
         public string BodyType { get; set; }
         public string CarMake { get; set; }
@@ -13,7 +14,7 @@ namespace CarTest
         public string Colour { get; set; }
         public int Mileage { get; set; }
     
-        public bool Find(string CarMake)
+        public bool Find(int CarNo)
       
         {
             //create an instance of the data connection
@@ -27,6 +28,7 @@ namespace CarTest
             {
             //copy the data from the database to the private data members
             Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+            CarNo = Convert.ToInt32(DB.DataTable.Rows[0]["CarNo"]);
             Age = Convert.ToInt32(DB.DataTable.Rows[0]["HouseNo"]);
             BodyType = Convert.ToString(DB.DataTable.Rows[0]["Street"]);
             CarMake = Convert.ToString(DB.DataTable.Rows[0]["Town"]);
