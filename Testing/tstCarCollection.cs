@@ -25,14 +25,14 @@ namespace Testing
             //create some test data to assign to the property
             clsCar TestCar = new clsCar();
             //set the properties of the test object
-            TestCar.CarNo = 1;
-            TestCar.Active = true;
+            TestCar.CarNo = 1;            
             TestCar.CarMake = "Honda";
             TestCar.CarModel = "Civic";
             TestCar.Colour = "red";
+            TestCar.BodyType = "Sedan";                       
             TestCar.Age = 5;
-            TestCar.BodyType = "Sedan";
-            TestCar.Mileage = 100000;
+            TestCar.Active = true;
+            TestCar.Mileage = 100000;                      
             //assign the data to the property
             AllAddresses.ThisCar = TestCar;
             //test to see that the two values are the same
@@ -52,12 +52,12 @@ namespace Testing
             clsCar TestItem = new clsCar();
             //set its properties
             TestItem.CarNo = 1;
-            TestItem.Active = true;
             TestItem.CarMake = "Honda";
             TestItem.CarModel = "Civic";
             TestItem.Colour = "red";
-            TestItem.BodyType = "Sedan";
+            TestItem.BodyType = "Sedan";            
             TestItem.Mileage = 100000;
+            TestItem.Active = true;
             TestItem.Age = 5;
             //add the item to the test list
             TestList.Add(TestItem);
@@ -78,14 +78,14 @@ namespace Testing
             //var to store the primary key
             int PrimaryKey = 0;
             //set its properties
-            TestItem.CarNo = 1;
-            TestItem.Active = true;
+            TestItem.CarNo = 1;          
             TestItem.CarMake = "Honda";
             TestItem.CarModel = "Civic";
             TestItem.Colour = "red";
             TestItem.BodyType = "Sedan";
-            TestItem.Mileage = 100000;
             TestItem.Age = 5;
+            TestItem.Active = true;
+            TestItem.Mileage = 100000;
             //set ThisCar to the test data
             AllCars.ThisCar = TestItem;
             //add the record
@@ -108,14 +108,14 @@ namespace Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.CarNo = 1;
-            TestItem.Active = true;
+            TestItem.CarNo = 1;        
             TestItem.CarMake = "Honda";
             TestItem.CarModel = "Civic";
-            TestItem.Colour = "red";
-            TestItem.BodyType = "Sedan";
-            TestItem.Mileage = 100000;
+            TestItem.Colour = "red";           
+            TestItem.BodyType = "Sedan";                 
             TestItem.Age = 5;
+            TestItem.Active = true;       
+            TestItem.Mileage = 100000;
             //set ThisCar to the test data
             AllCars.ThisCar = TestItem;
             //add the record

@@ -5,36 +5,165 @@ namespace CarTest
 {
     public class clsCar
     {
-        public bool Active { get; set; }
-        public int CarNo { get; set; }
-        public int Age { get; set; }
-        public string BodyType { get; set; }
-        public string CarMake { get; set; }
-        public string CarModel { get; set; }
-        public string Colour { get; set; }
-        public int Mileage { get; set; }
+        //private data member for the AddressNo property
+        private Int32 mCarNo;
+        //private data member for HouseNo
+        private string mCarMake;
+        //private data member for street
+        private string mCarModel;
+        //private data member for town
+        private string mColour;
+        //private data member for post code
+        private string mBodyType;
+        //private data member for county no
+        private Int32 mAge;
+        //private data member for active       
+        private Boolean mActive;
+        //private date added data member
+        private Int32 mMileage;
+        
+        
+        //public property for active
+        public bool Active
+        {
+            get
+            {
+                //return the private data
+                return mActive;
+            }
+            set
+            {
+                //set the private data
+                mActive = value;
+            }
+        }
+
+        //public property for Mileage
+        public Int32 Mileage
+        {
+            get
+            {
+                //return the private data
+                return mMileage;
+            }
+            set
+            {
+                //set the private data
+                mMileage = value;
+            }
+        }
+
+        //public property for the address number
+        public int CarNo
+        {
+            get
+            {
+                //return the private data
+                return mCarNo;
+            }
+            set
+            {
+                //set the value of the private data member
+                mCarNo = value;
+            }
+        }
+
+        //public property for county no
+        public string CarMake
+        {
+            get
+            {
+                //return the private data
+                return mCarMake;
+            }
+            set
+            {
+                //set the private data
+                mCarMake = value;
+            }
+        }
+
+        //public property for house no
+        public string CarModel
+        {
+            get
+            {
+                //return private data
+                return mCarModel;
+            }
+            set
+            {
+                //set the private data
+                mCarModel = value;
+            }
+        }
+
+        //public property for post code
+        public string Colour
+        {
+            get
+            {
+                //return the private data
+                return mColour;
+            }
+            set
+            {
+                //set the private data
+                mColour = value;
+            }
+        }
+
+        //public data member for street
+        public string BodyType
+        {
+            get
+            {
+                //return the private data
+                return mBodyType;
+            }
+            set
+            {
+                //set the private data
+                mBodyType = value;
+            }
+        }
+
+        //public data member for Town
+        public Int32 Age
+        {
+            get
+            {
+                //return the private data
+                return mAge;
+            }
+            set
+            {
+                //set the private data
+                mAge = value;
+            }
+        }
     
-        public bool Find(int CarNo)
+    public bool Find(int CarNo)
       
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the address no to search for
-            DB.AddParameter("@CarMake", CarMake);
+            DB.AddParameter("@CarNo", CarNo);
             //execute the stored procedure
-            DB.Execute("sproc_tblCar_FilterByCarMake");
+            DB.Execute("sproc_tblCar_FilterByCarNo");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
             //copy the data from the database to the private data members
-            Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
-            CarNo = Convert.ToInt32(DB.DataTable.Rows[0]["CarNo"]);
-            Age = Convert.ToInt32(DB.DataTable.Rows[0]["HouseNo"]);
-            BodyType = Convert.ToString(DB.DataTable.Rows[0]["Street"]);
-            CarMake = Convert.ToString(DB.DataTable.Rows[0]["Town"]);
-            CarModel = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
-            Colour = Convert.ToString(DB.DataTable.Rows[0]["CountyNo"]);
-            Mileage = Convert.ToInt32(DB.DataTable.Rows[0]["DateAdded"]);
+            CarNo = Convert.ToInt32(DB.DataTable.Rows[0]["CarNo"]);                                   
+            CarMake = Convert.ToString(DB.DataTable.Rows[0]["CarMake"]);
+            CarModel = Convert.ToString(DB.DataTable.Rows[0]["CarModel"]);
+            Colour = Convert.ToString(DB.DataTable.Rows[0]["Colour"]);
+            BodyType = Convert.ToString(DB.DataTable.Rows[0]["BodyType"]);
+            Age = Convert.ToInt32(DB.DataTable.Rows[0]["Age"]);                       
+            Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]); 
+            Mileage = Convert.ToInt32(DB.DataTable.Rows[0]["Mileage"]);
             
             //return that everything worked OK
             return true;
