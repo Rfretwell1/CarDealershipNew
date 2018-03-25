@@ -41,13 +41,14 @@ namespace CarClassLibrary
                 //create a blank Car
                 clsCar AnCar = new clsCar();
                 //read in the fields from the current record
-                AnCar.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+                AnCar.CarNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CarNo"]);
                 AnCar.CarMake = Convert.ToString(DB.DataTable.Rows[Index]["CarMake"]);
                 AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
-                AnCar.Colour = Convert.ToString(DB.DataTable.Rows[Index]["Colour"]);
-                AnCar.Mileage = Convert.ToInt32(DB.DataTable.Rows[Index]["Mileage"]);
+                AnCar.Colour = Convert.ToString(DB.DataTable.Rows[Index]["Colour"]);                                               
+                AnCar.BodyType = Convert.ToString(DB.DataTable.Rows[Index]["BodyType"]);
                 AnCar.Age = Convert.ToInt32(DB.DataTable.Rows[Index]["Age"]);
-                AnCar.BodyType = Convert.ToString(DB.DataTable.Rows[Index]["BodyTYpe"]);
+                AnCar.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+                AnCar.Mileage = Convert.ToInt32(DB.DataTable.Rows[Index]["Mileage"]);
                 //add the record to the private data mamber
                 mCarList.Add(AnCar);
                 //point at the next record
@@ -105,15 +106,16 @@ namespace CarClassLibrary
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             DB.AddParameter("@CarNo", mThisCar.Active);
-            DB.AddParameter("@Active", mThisCar.Active);
             DB.AddParameter("@CarMake", mThisCar.CarMake);
             DB.AddParameter("@CarModel", mThisCar.CarModel);
             DB.AddParameter("@Colour", mThisCar.Colour);
-            DB.AddParameter("@Age", mThisCar.Age);
-            DB.AddParameter("@Mileage", mThisCar.Mileage);
             DB.AddParameter("@BodyType", mThisCar.BodyType);
+            DB.AddParameter("@Age", mThisCar.Age);
+            DB.AddParameter("@Active", mThisCar.Active);
+            DB.AddParameter("@Mileage", mThisCar.Mileage);
+            
             //execute the query returning the primary key value
-            return DB.Execute("sproc_tblCar_Insert");
+            return DB.Execute("sproc_tblCar2_Insert");
 
 
         }
@@ -123,9 +125,9 @@ namespace CarClassLibrary
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            DB.AddParameter("@CarNo", mThisCar.CarNo);
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_Delete");
+            DB.Execute("sproc_tblCar_Delete");
         }
 
         public int Update()
@@ -146,15 +148,15 @@ namespace CarClassLibrary
 
         }
 
-        public void FilterByCarMake(string CarMake)
+        public void FilterByCarNo(int CarNo)
         {
             //filters the records based on a full or partial post code
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //send the PostCode parameter to the database
-            DB.AddParameter("@CarMake", CarMake);
+            DB.AddParameter("@CarNo", CarNo);
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_FilterByCarMake");
+            DB.Execute("sproc_tblCar_FilterByCarNo");
             //populate the array list with the data table
             PopulateArray(DB);
         }
