@@ -131,5 +131,47 @@ namespace Testing
             //test to see that the two values are the same
             Assert.IsFalse(Found);
         }
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCarCollection AllCars = new clsCarCollection();
+            //create the item of test data
+            clsCar TestItem = new clsCar();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.CarNo = 1;
+            TestItem.CarMake = "Honda";
+            TestItem.CarModel = "Civic";
+            TestItem.Colour = "red";
+            TestItem.BodyType = "Sedan";
+            TestItem.Age = 5;
+            TestItem.Active = true;
+            TestItem.Mileage = 100000;
+            //set ThisAddress to the test data
+            AllCars.ThisCar = TestItem;
+            //add the record
+            PrimaryKey = AllCars.Add();
+            //set the primary key of the test data
+            TestItem.CarNo = PrimaryKey;
+            //modify the test data
+            TestItem.CarNo = 1;
+            TestItem.CarMake = "Honda";
+            TestItem.CarModel = "Civic";
+            TestItem.Colour = "red";
+            TestItem.BodyType = "Sedan";
+            TestItem.Age = 6;
+            TestItem.Active = true;
+            TestItem.Mileage = 100000;
+            //set the record based on the new test data
+            AllCars.ThisCar = TestItem;
+            //update the record
+            AllCars.Update();
+            //find the record
+            AllCars.ThisCar.Find(PrimaryKey);
+            //test to see ThisCar matches the test data
+            Assert.AreEqual(AllCars.ThisCar, TestItem);
+        }
     }
 }
