@@ -46,7 +46,7 @@ namespace CarClassLibrary
             set
             {
                 // set the value of the private data member 
-               mCost = value;
+                mCost = value;
 
             }
         }
@@ -76,7 +76,7 @@ namespace CarClassLibrary
             set
             {
                 // set the value of the private data member 
-               mDescription = value;
+                mDescription = value;
 
             }
         }
@@ -102,7 +102,7 @@ namespace CarClassLibrary
             {
                 //return the pritivate data 
                 return mMaintenanceID;
-           
+
             }
 
             set
@@ -113,7 +113,7 @@ namespace CarClassLibrary
             }
         }
 
-        public string Valid(string Description,string Cost, string Date)
+        public string Valid(string Description, string Cost, string Date)
         {
             DateTime DateTemp;
             string Error = "";
@@ -134,21 +134,27 @@ namespace CarClassLibrary
             {
                 Error = Error + "cost 50 characters or less ";
             }
+            try
 
-            DateTemp = Convert.ToDateTime(Date);
-            if (DateTemp < DateTime.Now.Date)
             {
-                Error = Error + "date may not be blank ";
-            }
-           
-            if (DateTemp > DateTime.Now.Date)
-            {
-                Error = Error + "date may not be blank ";
-            }
+                DateTemp = Convert.ToDateTime(Date);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "date may not be in the past ";
+                }
 
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "date may not be in the past";
+                }
+            }
+            catch
+            {
+               
+                Error = Error + "date was not vaild";
+            }
             return Error;
-        }
-
+      }
         public bool Find(int Maintenance)
         {
 
