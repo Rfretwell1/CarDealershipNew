@@ -34,8 +34,8 @@ namespace CarClassLibrary
         }
 
        
-        public string SurnameName { get; set; }
         
+        public string Surname { get; set; }
 
         public bool Find(Int32 PaymentID)
         {
@@ -49,6 +49,19 @@ namespace CarClassLibrary
         //private data member to the test data value 
         private Int32 mPaymentNo;
         private string mCarID;
+
+        public string Valid(string PaymentID, string FirstName, string Surname, string CarID, string EmployeeID, string Description, string DateTime, string Cost)
+        {
+            //create a string variable to store the error 
+            String Error = "";
+            //if the CarID is blank
+            if (CarID.Length < 1)
+            {
+                Error = Error + "The CarId Should Not be 0";
+            }
+            //return any error messages 
+            return Error; 
+        }
     }
     
 }

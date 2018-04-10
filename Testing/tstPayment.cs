@@ -110,16 +110,16 @@ namespace tstPayment
         }
 
         [TestMethod]
-        public void SurnameNamePropertyOK()
+        public void SurnamePropertyOK()
         {
             //create an instance of the class we want to create 
             clsPayment AnPayment = new clsPayment();
             //create some test data to assign to the property 
             string TestData = "Stanley";
             //assign the data to the property 
-            AnPayment.SurnameName = TestData;
+            AnPayment.Surname = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnPayment.SurnameName, TestData);
+            Assert.AreEqual(AnPayment.Surname, TestData);
         }
 
         [TestMethod]
@@ -183,6 +183,30 @@ namespace tstPayment
             //test to see that the result is correctr 
             Assert.IsTrue(OK);
         }
+
+       [TestMethod]
+        public void CarIDMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "";
+            string FirstName = "";
+            string Surname = "";
+            string CarID = "";
+            string EmployeeID = "";
+            string Description = "";
+            string DateTime = "";
+            string Cost = ""; 
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
 
     }
 }
