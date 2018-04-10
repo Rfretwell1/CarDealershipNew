@@ -56,29 +56,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarBook2", "..\CarBook2\", 
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52621"
-		SlnRelativePath = "..\CarBook2\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarLotWebsite", "..\..\Documents\Project Managament and Development\CarLotWebsite\", "{E481D751-2A1B-4398-9C0F-BCE6B1CC007B}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52723"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\Documents\Project Managament and Development\CarLotWebsite\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52723\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
+		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52723"
-		Release.AspNetCompiler.PhysicalPath = "..\..\Documents\Project Managament and Development\CarLotWebsite\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52723\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
+		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52723"
-		SlnRelativePath = "..\..\Documents\Project Managament and Development\CarLotWebsite\"
+		VWDPort = "52621"
+		SlnRelativePath = "..\CarBook2\"
+		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
 Global
@@ -99,10 +97,6 @@ Global
 		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{E481D751-2A1B-4398-9C0F-BCE6B1CC007B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E481D751-2A1B-4398-9C0F-BCE6B1CC007B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E481D751-2A1B-4398-9C0F-BCE6B1CC007B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{E481D751-2A1B-4398-9C0F-BCE6B1CC007B}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

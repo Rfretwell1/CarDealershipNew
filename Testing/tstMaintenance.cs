@@ -426,7 +426,23 @@ namespace tstMaintenance
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void DateInvalidDate()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            string Date = "this is not date";
+            //invoke the method
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
 
+        }
 
         //find method
 
