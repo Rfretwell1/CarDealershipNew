@@ -19,7 +19,7 @@ namespace CarClassLibrary
         public string JobTitle { get; set; }
         public string PhoneNumber { get; set; }
         public string PostCode { get; set; }
-       
+
 
 
 
