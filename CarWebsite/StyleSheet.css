@@ -1,0 +1,58 @@
+﻿body 
+{
+    color:dimgray; /*Main Colour*/
+    background-color:dimgrey; /*Background colour*/
+    border-style: double; /* Border stlye*/
+    border-bottom:double; /*Border Style*/
+    border-color:white; /* border colour*/
+}
+
+.btn-group button {
+    background-color: blue; /* blue background */
+    border: 1px solid blue; /* blue border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: darkblue;
+} 
+
+.btn-login button
+{
+background-color: white; /* white background */
+    border: 1px solid white; /* white border */
+    color: black; /* black text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+.btn-login button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+
+.btn-login:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-login button:hover {
+    background-color: mintcream;
+} 

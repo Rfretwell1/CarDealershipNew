@@ -52,6 +52,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="tstCar.cs" />
     <Compile Include="tstCarCollection.cs" />
     <Compile Include="tstCustomer.cs" />
@@ -68,6 +73,12 @@
       <Project>{5e2368c2-51f3-46db-9c02-bf0c783fc2a4}</Project>
       <Name>CarClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
