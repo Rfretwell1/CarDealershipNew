@@ -113,8 +113,9 @@ namespace CarClassLibrary
             }
         }
 
-        public string Valid(string Description,string Cost, string MntDate)
+        public string Valid(string Description,string Cost, string Date)
         {
+            DateTime DateTemp;
             string Error = "";
             if (Description == "")
             {
@@ -134,27 +135,46 @@ namespace CarClassLibrary
                 Error = Error + "cost 50 characters or less ";
             }
 
-
-            if (MntDate == "")
+            DateTemp = Convert.ToDateTime(Date);
+            if (DateTemp < DateTime.Now.Date)
             {
                 Error = Error + "date may not be blank ";
             }
+           
+            if (DateTemp > DateTime.Now.Date)
+            {
+                Error = Error + "date may not be blank ";
+            }
+
             return Error;
         }
 
         public bool Find(int Maintenance)
         {
-            //Set the pritvate data member to the set data value
-            mMaintenanceID = 12;
-            mActive = true;
-            mCost = 1;
-            mDate = Convert.ToDateTime("16/9/2017");
-            mDescription= "test description";
-            mRepair = true;
-           //alwyas return true 
-            return true;
-        }
 
-     
+            //create an intance 
+            clsDataConnection DB = new clsDataConnection();
+            //add the paratmer 
+            DB.AddParameter("@MaintenanceID", MaintenanceID);
+            // excute the stored prodoues 
+            DB.Execute("sproc_tblMaintenance_FilterByMaintenanceID");
+            //if one record is found
+            if(DB.Count == 1)
+                {
+                //copy the data form the database to the member
+                mMaintenanceID = Convert.ToInt32(DB.DataTable.Rows[0]["MaintenanceID"]);
+                mRepair = Convert.ToBoolean(DB.DataTable.Rows[0]["Repair"]);
+                mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
+                mDate = Convert.ToDateTime(DB.DataTable.Rows[0]["Date"]);
+                mCost = Convert.ToInt32(DB.DataTable.Rows[0]["Cost"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                return true;
+            }
+             //if no records found
+             else
+            {
+                return false;
+            }
+        }
     }
 }
