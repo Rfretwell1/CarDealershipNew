@@ -206,7 +206,166 @@ namespace tstPayment
             Assert.AreNotEqual(Error, "");
 
         }
+        [TestMethod]
+        public void CarIDMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "C";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
 
+        }
 
+        [TestMethod]
+        public void CarIDMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "CC";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void CarIDMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "";
+            CarID = CarID.PadRight(49, 'a');
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CarIDMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "";
+            CarID = CarID.PadRight(51, 'a');
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CarIDMax()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "";
+            CarID = CarID.PadRight(50, 'a');
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CarIDMid()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "";
+            CarID = CarID.PadRight(25, 'a');
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void CarIDExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentID = "P11344455";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "";
+            CarID = CarID.PadRight(500, 'a');
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
     }
 }
