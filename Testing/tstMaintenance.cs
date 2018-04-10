@@ -310,7 +310,125 @@ namespace tstMaintenance
             Assert.AreEqual(AnMaintenance.Date, testData);
         }
 
-//find method
+        [TestMethod]
+        public void DateExtremeMin()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            DateTime TestDate;
+            //set the date today
+            TestDate = DateTime.Now.Date;
+            //change the to less than 100 years ago
+            TestDate = TestDate.AddYears(-100);
+            //convert the date varialbe to string varibale
+            string Date = TestDate.ToString(); 
+            //invoke the method 
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DateMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            DateTime TestDate;
+            //set the date today
+            TestDate = DateTime.Now.Date;
+            //change the to less than 100 years ago
+            TestDate = TestDate.AddDays(-1);
+            //convert the date varialbe to string varibale
+            string Date = TestDate.ToString();
+            //invoke the method 
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DateMin()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            DateTime TestDate;
+            //set the date today
+            TestDate = DateTime.Now.Date;
+            //convert the date varialbe to string varibale
+            string Date = TestDate.ToString();
+            //invoke the method 
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void DateMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            DateTime TestDate;
+            //set the date today
+            TestDate = DateTime.Now.Date;
+            //change the to less than 100 years ago
+            TestDate = TestDate.AddDays(1);
+            //convert the date varialbe to string varibale
+            string Date = TestDate.ToString();
+            //invoke the method 
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result is correct 
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DateExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AMaitenance = new clsMaintenance();
+            //boolean variable to store the results of the vaildation 
+            string Error = "";
+            string TestDescription = "a";
+            string TestCost = "";
+            //create the variable
+            DateTime TestDate;
+            //set the date today
+            TestDate = DateTime.Now.Date;
+            //change the to less than 100 years ago
+            TestDate = TestDate.AddYears(100);
+            //convert the date varialbe to string varibale
+            string Date = TestDate.ToString();
+            //invoke the method 
+            Error = AMaitenance.Valid(TestDescription, TestCost, Date);
+            //test to see that the result iss correct 
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+
+        //find method
 
         [TestMethod]
         public void FindMethodOK()
@@ -320,7 +438,7 @@ namespace tstMaintenance
             //boolean variable to store the seslut of the vaildation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 MaintenanceNo = 1;
+            Int32 MaintenanceNo = 21;
             //invoke the method
             Found = anMaintenance.Find(MaintenanceNo);
             //test to see that the result is correct
@@ -387,7 +505,7 @@ namespace tstMaintenance
             //invoke the method
             Found = anMaintenance.Find(MaintenanceID);
             //check the maintenance
-            if (anMaintenance.Cost != 12)
+            if (anMaintenance.Cost != 1)
             {
                 Ok = false;
             }
