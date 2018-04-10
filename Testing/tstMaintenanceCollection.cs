@@ -49,7 +49,7 @@ namespace tstMaintenance
         [TestMethod]
         public void ThisMaintenanceProperyOK()
         {
-            //create an isnatance of the class
+            //create an isnatance of the class 
             clsMaintenanceCollection AllMaintenance = new clsMaintenanceCollection();
             //create the item
             clsMaintenance TestMaintenace = new clsMaintenance();
@@ -76,7 +76,7 @@ namespace tstMaintenance
             Int32 SomeCount = 0;
             //assign the data
             AllMnt.count = SomeCount;
-            //test to see that the two values are the same
+            //test to see that the two value are the same
             Assert.AreEqual(AllMnt.count, SomeCount);
         }
 
