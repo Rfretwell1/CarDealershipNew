@@ -59,6 +59,76 @@ namespace CarClassLibrary
             {
                 Error = Error + "The CarId Should Not be 0";
             }
+            if (CarID == "")
+            {
+                //flag an error
+                Error = Error + "CarID cannot be blank";
+            }
+            if (CarID.Length > 50)
+            {
+                //flag an error
+                Error = Error + "CarID cannot be more than 50 characters";
+            }
+
+            if (FirstName == "")
+            {
+                //flag an error
+                Error = Error + "FirstName cannot be blank";
+            }
+            //if the FirstNAme of the customer is more than 50 characters
+            if (FirstName.Length > 50)
+            {
+                //flag an error
+                Error = Error + "FirstName cannot be more than 50 characters";
+            }
+
+            if (EmployeeID == "")
+            {
+                //flag an error
+                Error = Error + "EmployeeID cannot be blank";
+            }
+            //if the EmployeeID of the customer is more than 50 characters
+            if (EmployeeID.Length > 50)
+            {
+                //flag an error
+                Error = Error + "EmployeeID cannot be more than 50 characters";
+            }
+
+            if (Description == "")
+            {
+                //flag an error
+                Error = Error + "Description cannot be blank";
+            }
+            //if the Description of the customer is more than 50 characters
+            if (Description.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Description cannot be more than 50 characters";
+            }
+
+            if (DateTime == "")
+            {
+                //flag an error
+                Error = Error + "DateTime cannot be blank";
+            }
+            //if the DateTime of the customer is more than 50 characters
+            if (DateTime.Length > 50)
+            {
+                //flag an error
+                Error = Error + "DateTime cannot be more than 50 characters";
+            }
+
+            if (Cost == "")
+            {
+                //flag an error
+                Error = Error + "Description cannot be blank";
+            }
+            //if the Cost of the customer is more than 50 characters
+            if (Cost.Length > 50)
+            {
+                //flag an error
+                Error = Error + "Cost cannot be more than 50 characters";
+            }
             //return any error messages 
             return Error; 
         }
