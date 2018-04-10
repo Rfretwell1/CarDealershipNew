@@ -47,18 +47,7 @@ namespace Testing
             Assert.AreEqual(Employees.EmployeeList, TestList);
         }
 
-        //[TestMethod] // not sure wether i will need this or not 
-        //public void CountPropertyOK()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsEmployeeCollection AllEmployees = new clsEmployeeCollection();
-        //    //create some test data to assign to the property
-        //    Int32 SomeCount = 2;
-        //    //assign the data to the property
-        //    AllEmployees.Count = SomeCount;
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(AllEmployees.Count, SomeCount);
-        //}
+=
 
         [TestMethod]
 
