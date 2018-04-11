@@ -50,7 +50,7 @@ namespace CarClassLibrary
         private Int32 mPaymentNo;
         private string mCarID;
 
-        public string Valid(string PaymentID, string FirstName, string Surname, string CarID, string EmployeeID, string Description, string DateTime, string Cost)
+        public string Valid(string PaymentNo, string FirstName, string Surname, string CarID, string EmployeeID, string Description, string DateTime, string Cost)
         {
             //create a string variable to store the error 
             String Error = "";
