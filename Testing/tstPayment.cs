@@ -192,7 +192,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "";
+            string PaymentNo = "";
             string FirstName = "";
             string Surname = "";
             string CarID = "";
@@ -201,7 +201,7 @@ namespace tstPayment
             string DateTime = "";
             string Cost = ""; 
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -214,7 +214,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "0";
@@ -223,7 +223,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -237,7 +237,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "CC";
@@ -246,7 +246,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -260,7 +260,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "";
@@ -270,7 +270,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -283,7 +283,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "";
@@ -293,7 +293,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -306,7 +306,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "";
@@ -316,7 +316,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -329,7 +329,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "";
@@ -339,7 +339,7 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
@@ -352,7 +352,7 @@ namespace tstPayment
             //boolean variable to store the result of the validation 
             string Error = "";
             //create some test data to assign the property     
-            string PaymentID = "P11344455";
+            string PaymentNo = "11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
             string CarID = "";
@@ -362,7 +362,289 @@ namespace tstPayment
             string DateTime = "21/08/2017";
             string Cost = "50.00";
             //invoke the method
-            Error = AnPayment.Valid(PaymentID, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            string FirstName = "";
+            string Surname = "";
+            string CarID = "";
+            string EmployeeID = "";
+            string Description = "";
+            string DateTime = "";
+            string Cost = "";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "1";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "11";
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            PaymentNo= PaymentNo.PadRight(49, '1');
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            PaymentNo = PaymentNo.PadRight(51, '1');
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMax()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            PaymentNo = PaymentNo.PadRight(50, '1');
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PaymentNoMid()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            PaymentNo = PaymentNo.PadRight(25, '1');
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PaymentNoExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            PaymentNo = PaymentNo.PadRight(500, '1');
+            string FirstName = "Ben";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+
+
+        [TestMethod]
+        public void FirstNameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "";
+            string FirstName = "";
+            string Surname = "";
+            string CarID = "";
+            string EmployeeID = "";
+            string Description = "";
+            string DateTime = "";
+            string Cost = "";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void FirstNameMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "1";
+            string FirstName = "B";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void FirstNameMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "1";
+            string FirstName = "BB";
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
+            //test to see that the result is ok
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void FirstNameMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsPayment AnPayment = new clsPayment();
+            //boolean variable to store the result of the validation 
+            string Error = "";
+            //create some test data to assign the property     
+            string PaymentNo = "1";
+            string FirstName = "";
+            FirstName = FirstName.PadRight(51, 'B');
+            string Surname = "Stark";
+            string CarID = "0";
+            string EmployeeID = "EM13243";
+            string Description = "MOT";
+            string DateTime = "21/08/2017";
+            string Cost = "50.00";
+            //invoke the method
+            Error = AnPayment.Valid(PaymentNo, FirstName, Surname, CarID, EmployeeID, Description, DateTime, Cost);
             //test to see that the result is ok
             Assert.AreNotEqual(Error, "");
 
