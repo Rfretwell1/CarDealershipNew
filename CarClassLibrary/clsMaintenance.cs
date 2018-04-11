@@ -158,8 +158,6 @@ namespace CarClassLibrary
         public bool Find(int Maintenance)
         {
 
-
-
             //create an intance 
             clsDataConnection DB = new clsDataConnection();
             //add the paratmer 
@@ -167,8 +165,8 @@ namespace CarClassLibrary
             // excute the stored prodoues 
             DB.Execute("sproc_tblMaintenance_FilterByMaintenanceID");
             //if one record is found
-            if(DB.Count == 1)
-                {
+            if (DB.Count == 1)
+            {
                 //copy the data form the database to the member
                 mMaintenanceID = Convert.ToInt32(DB.DataTable.Rows[0]["MaintenanceID"]);
                 mRepair = Convert.ToBoolean(DB.DataTable.Rows[0]["Repair"]);
@@ -178,8 +176,8 @@ namespace CarClassLibrary
                 mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 return true;
             }
-             //if no records found
-             else
+            //if no records found
+            else
             {
                 return false;
             }
