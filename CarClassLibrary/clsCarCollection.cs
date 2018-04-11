@@ -148,17 +148,18 @@ namespace CarClassLibrary
 
         }
 
-        public void FilterByCarNo(int CarNo)
+        public void FilterByCarMake2(string CarMake)
         {
-            //filters the records based on a full or partial post code
+            //filters the records based on a full or partial car make
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //send the PostCode parameter to the database
-            DB.AddParameter("@CarNo", CarNo);
+            DB.AddParameter("@CarMake", CarMake);
             //execute the stored procedure
-            DB.Execute("sproc_tblCar_FilterByCarNo");
+            DB.Execute("sproc_tblCar_FilterByCarMake");
             //populate the array list with the data table
             PopulateArray(DB);
+
         }
 
     }
