@@ -444,7 +444,7 @@ namespace tstMaintenance
 
         }
 
-        //find method
+       // find method
 
         //[TestMethod]
         //public void FindMethodOK()
@@ -453,10 +453,10 @@ namespace tstMaintenance
         //    clsMaintenance anMaintenance = new clsMaintenance();
         //    //boolean variable to store the seslut of the vaildation
         //    Boolean Found = false;
-        //    //create some test data to use with the method
-        //    Int32 MaintenanceNo = 21;
+        //    //create some test data to use with the method 
+        //    Int32 MaintenanceID = 21;
         //    //invoke the method
-        //    Found = anMaintenance.Find(MaintenanceNo);
+        //    Found = anMaintenance.Find(MaintenanceID);
         //    //test to see that the result is correct
         //    Assert.IsTrue(Found);
         //}
@@ -476,12 +476,12 @@ namespace tstMaintenance
         //    Found = anMaintenance.Find(MaintenanceID);
         //    //check the maintenance
         //    if (anMaintenance.MaintenanceID != 12)
-        //        {
+        //    {
         //        Ok = false;
-        //       }
+        //    }
         //    //test to see that the resuts is correct 
         //    Assert.IsTrue(Ok);
-          
+
         //}
 
         //[TestMethod]
