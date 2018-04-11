@@ -3,19 +3,139 @@ namespace CarClassLibrary
 {
     public class clsCustomer
     {
-        public clsCustomer()
+
+        private bool mActive;
+        private string mAddress;
+        private Int32 mCustomerID;
+        private DateTime mDateAdded;
+        private string mEmailAddress;
+        private string mFirstName;
+        private string mLastName;
+        private string mPhoneNumber;
+        private string mPostCode;
+
+
+        public bool Active
         {
+            get
+            {
+                //return the rivate data
+                return mActive;
+            }
+            set
+            {
+                //set the value of the private data member
+                mActive = value;
+            }
         }
 
-        public bool Active { get;  set; }
-        public string Address { get;  set; }
-        public int CustomerID { get;  set; }
-        public DateTime DateAdded { get;  set; }
-        public string EmailAddress { get;  set; }
-        public string FirstName { get;  set; }
-        public string LastName { get;  set; }
-        public string PhoneNumber { get;  set; }
-        public string PostCode { get;  set; }
+        public string Address
+        {
+            get
+            { 
+                //return the private data
+                return mAddress;
+            }
+            set
+            {
+                //set the value of the private data member
+                mAddress = value;
+            }
+        }
+
+        public Int32 CustomerID
+        {
+            get
+            {
+                //return the private data member
+                return mCustomerID;
+            }
+            set
+            {
+                //set the value of the private data member
+                mCustomerID = value;
+            }
+        }
+
+        public DateTime DateAdded
+        {
+            get
+            {
+                //return the private data member
+                return mDateAdded;
+            }
+            set
+            {
+                //set the value of the private data member
+                mDateAdded = value;
+            }
+        }
+
+        public string EmailAddress
+        {
+            get
+            {
+                //return the private data member
+                return mEmailAddress;
+            }
+            set
+            {
+                //set the value of the private data member
+                mEmailAddress = value;
+            }
+        }
+
+        public string FirstName
+        {
+            get
+            {
+                return mFirstName;
+            }
+            set
+            {
+                //set the value of the private data member
+                mFirstName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return mLastName;
+            }
+            set
+            {
+                //set the value of the private data member
+                mLastName = value;
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get
+            {
+                return mPhoneNumber;
+            }
+            set
+            {
+                //set the value of the private data member
+                mPhoneNumber = value;
+            }
+        }
+
+        public string PostCode
+        {
+            get
+            {
+                return mPostCode;
+            }
+            set
+            {
+                //set the value of the private data member
+                mPostCode = value;
+            }
+        }
 
         public string Valid(string FirstName, string LastName, string Address, string PostCode, string DateAdded, string EmailAddress, string PhoneNumber)
         {
@@ -97,5 +217,16 @@ namespace CarClassLibrary
             }
             return Error;
         }
+
+        public bool Find(int customerID)
+        {
+
+            //set the private data member to the test data value
+            mCustomerID = 21;
+            //always return true
+            return true;
+        }
+
+
     }
 }

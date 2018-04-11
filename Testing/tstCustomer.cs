@@ -159,7 +159,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -174,7 +174,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
 
         }
 
@@ -190,7 +190,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -205,7 +205,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -220,7 +220,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -235,7 +235,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -250,7 +250,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -267,7 +267,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -282,7 +282,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
 
         }
 
@@ -298,7 +298,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
 
         }
 
@@ -314,7 +314,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -329,7 +329,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -344,7 +344,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -359,7 +359,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -374,7 +374,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -391,7 +391,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -406,7 +406,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
 
         }
 
@@ -422,7 +422,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is ok
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
 
         }
 
@@ -438,7 +438,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
 
         }
 
@@ -454,7 +454,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -469,7 +469,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -484,7 +484,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -499,7 +499,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -514,7 +514,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreEqual(Error,"");
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -531,7 +531,7 @@ namespace Testing
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error,"");
+            Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
@@ -635,7 +635,7 @@ namespace Testing
             //boolean variable to store the result of the validation
             string Error = "";
             //create some test data to assign the property
-           Address = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
+            Address = "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghija";
             //invoke the method
             Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DateAdded, EmailAddress, PhoneNumber);
             //test to see that the result is correct
@@ -955,8 +955,93 @@ namespace Testing
             Assert.AreNotEqual(Error, "");
         }
 
-        
+        [TestMethod]
+
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use within the method
+            Int32 CustomerID = 1;
+            Found = AnCustomer.Find(CustomerID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestCustomerIDFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the search 
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerID = 21;
+            //invoke the method
+            Found = AnCustomer.Find(CustomerID);
+            //check the address number
+            if (AnCustomer.CustomerID != 21)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
+        //[TestMethod]
+        //public void TestActiveFound()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsCustomer AnCustomer = new clsCustomer();
+        //    //boolean variable to store the result of the search 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is OK (assume it is)
+        //    Boolean OK = true;
+        //    //create some test data to use with the method
+        //    Int32 CustomerID = 21;
+        //    //invoke the method
+        //    Found = AnCustomer.Find(CustomerID);
+        //    //check the address number
+        //    if (AnCustomer.Active != true)
+        //    {
+        //        OK = false;
+        //    }
+        //    //test to see that the result is correct
+        //    Assert.IsTrue(OK);
+        //}
+
+
+        //[TestMethod]
+        //public void TestDateAddedFound()
+        //{
+        //    {
+        //        //create an instance of the class we want to create
+        //        clsCustomer AnCustomer = new clsCustomer();
+        //        //boolean variable to store the result of the search 
+        //        Boolean Found = false;
+        //        //boolean variable to record if data is OK (assume it is)
+        //        Boolean OK = true;
+        //        //create some test data to use with the method
+        //        Int32 CustomerID = 21;
+        //        //invoke the method
+        //        Found = AnCustomer.Find(CustomerID);
+        //        //check the address number
+        //        if (AnCustomer.DateAdded != Convert.ToDateTime("16/10/2017"))
+        //        {
+        //            OK = false;
+        //        }
+        //        //test to see that the result is correct
+        //        Assert.IsTrue(OK);
+        //    }
+
+        //}
+
+
+
     }
-
-
 }
