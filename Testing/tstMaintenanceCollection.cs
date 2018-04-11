@@ -2,16 +2,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
 namespace tstMaintenance
 {
 
-
     [TestClass]
-    class tstMaintenanceCollection
+    public class tstMaintenanceCollection
     {
       [TestMethod] 
       public void TestMethod1()
@@ -65,6 +64,31 @@ namespace tstMaintenance
             //test to see that the two values are the same
             Assert.AreEqual(AllMaintenance.ThisMaintenance, TestMaintenace);
         }
+
+
+        //[TestMethod]
+        //public void ListAndCountOK()
+        //{
+        //    //create an isnatance of the class
+        //    clsMaintenanceCollection AllMaintenance = new clsMaintenanceCollection();
+        //    //create some test data
+        //    List<clsMaintenance> TestList = new List<clsMaintenance>();
+        //    //create the item
+        //    clsMaintenance TestItem = new clsMaintenance();
+        //    //set it properties
+        //    TestItem.Active = true;
+        //    TestItem.MaintenanceID = 1;
+        //    TestItem.Cost = 1;
+        //    TestItem.Date = DateTime.Now.Date;
+        //    TestItem.Description = "something";
+        //    TestItem.Repair = true;
+        //    //add the item
+        //    TestList.Add(TestItem);
+        //    //assign the data
+        //    AllMaintenance.MaintenanceList = TestList;
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(AllMaintenance.MaintenanceList, TestList.Count);
+        //}
 
 
         [TestMethod]

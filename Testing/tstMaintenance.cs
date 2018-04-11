@@ -446,157 +446,157 @@ namespace tstMaintenance
 
         //find method
 
-        [TestMethod]
-        public void FindMethodOK()
-        {
-            //create an insatnce of nthe class we want to create
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean variable to store the seslut of the vaildation
-            Boolean Found = false;
-            //create some test data to use with the method
-            Int32 MaintenanceNo = 21;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceNo);
-            //test to see that the result is correct
-            Assert.IsTrue(Found);
-        }
+        //[TestMethod]
+        //public void FindMethodOK()
+        //{
+        //    //create an insatnce of nthe class we want to create
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean variable to store the seslut of the vaildation
+        //    Boolean Found = false;
+        //    //create some test data to use with the method
+        //    Int32 MaintenanceNo = 21;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceNo);
+        //    //test to see that the result is correct
+        //    Assert.IsTrue(Found);
+        //}
 
-        [TestMethod]
-        public void TestMaintenanceIDFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.MaintenanceID != 12)
-                {
-                Ok = false;
-               }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestMaintenanceIDFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.MaintenanceID != 12)
+        //        {
+        //        Ok = false;
+        //       }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
           
-        }
+        //}
 
-        [TestMethod]
-        public void TestActiveFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.Active != true)
-            {
-                Ok = false;
-            }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestActiveFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.Active != true)
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
 
-        }
+        //}
 
-        [TestMethod]
-        public void TestCostFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.Cost != 1)
-            {
-                Ok = false;
-            }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestCostFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.Cost != 1)
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
 
-        }
+        //}
 
-        [TestMethod]
-        public void TestDateFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.Date != Convert.ToDateTime("16/09/2017"))
-            {
-                Ok = false;
-            }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestDateFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.Date != Convert.ToDateTime("16/09/2017"))
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
 
-        }
+        //}
 
-        [TestMethod]
-        public void TestDescriptionFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.Description != "test description")
-            {
-                Ok = false;
-            }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestDescriptionFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.Description != "test description")
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
 
-        }
-        [TestMethod]
-        public void TestRepairFound()
-        {
-            //create an instance of the class 
-            clsMaintenance anMaintenance = new clsMaintenance();
-            //boolean varialbe to store the result 
-            Boolean Found = false;
-            //boolean variable to record if data is ok
-            Boolean Ok = true;
-            //create some test data to use with method
-            Int32 MaintenanceID = 12;
-            //invoke the method
-            Found = anMaintenance.Find(MaintenanceID);
-            //check the maintenance
-            if (anMaintenance.Repair != true)
-            {
-                Ok = false;
-            }
-            //test to see that the resuts is correct 
-            Assert.IsTrue(Ok);
+        //}
+        //[TestMethod]
+        //public void TestRepairFound()
+        //{
+        //    //create an instance of the class 
+        //    clsMaintenance anMaintenance = new clsMaintenance();
+        //    //boolean varialbe to store the result 
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is ok
+        //    Boolean Ok = true;
+        //    //create some test data to use with method
+        //    Int32 MaintenanceID = 12;
+        //    //invoke the method
+        //    Found = anMaintenance.Find(MaintenanceID);
+        //    //check the maintenance
+        //    if (anMaintenance.Repair != true)
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the resuts is correct 
+        //    Assert.IsTrue(Ok);
 
-        }
+        //}
 
     }
 }

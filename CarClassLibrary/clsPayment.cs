@@ -54,20 +54,19 @@ namespace CarClassLibrary
         {
             //create a string variable to store the error 
             String Error = "";
-            //if the CarID is blank
-            if (CarID.Length < 1)
+            //is car id valid
+            try
             {
-                Error = Error + "The CarId Should Not be 0";
+                Int32 TempCarID = Convert.ToInt32(CarID);
+                //if the CarID is blank
+                if (TempCarID <= 0)
+                {
+                    Error = Error + "The CarId Should Not be 0";
+                }
             }
-            if (CarID == "")
+            catch
             {
-                //flag an error
-                Error = Error + "CarID cannot be blank";
-            }
-            if (CarID.Length > 50)
-            {
-                //flag an error
-                Error = Error + "CarID cannot be more than 50 characters";
+                Error = Error + "CarID is not a valid number";
             }
 
             if (FirstName == "")

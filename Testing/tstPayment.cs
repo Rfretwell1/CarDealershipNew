@@ -217,7 +217,7 @@ namespace tstPayment
             string PaymentID = "P11344455";
             string FirstName = "Ben";
             string Surname = "Stark";
-            string CarID = "C";
+            string CarID = "0";
             string EmployeeID = "EM13243";
             string Description = "MOT";
             string DateTime = "21/08/2017";
