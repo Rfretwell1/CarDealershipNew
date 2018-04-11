@@ -3,7 +3,9 @@
 namespace CarClassLibrary
 {
     public class clsEmployee
-    {
+    { // private data member for the employeee number 
+        private Int32 mEmployeeNo;
+
         public clsEmployee()
         {
 
@@ -137,6 +139,14 @@ namespace CarClassLibrary
                 Error = Error + "Phone Number cannot be more than 15 characters";
             }
             return Error;
+        }
+
+        public bool Find(int EmployeeNo)
+        {
+            //set the private data menmeber to the test vslue
+            mEmployeeNo = 21;
+            // always return true
+            return true;
         }
     }
 }

@@ -30,7 +30,7 @@ namespace CarClassLibrary
         //Possibly change this as this may not work with other people in my groups work? 
         public clsDataConnection()
         {
-            GetConString("I:\\Car Dealership\\App_Data\\CarBook.mdf");
+            GetConString("H:\\Desktop\\april\\AppData\\CarBook.mdf");
         }
 
         public clsDataConnection(string DBLocation)

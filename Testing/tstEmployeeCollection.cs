@@ -48,6 +48,21 @@ namespace Testing
         }
         //testing to see if it will work
 
+        [TestMethod]
+        public void FindMethodOk()
+        {
+            //create an instance of the class we wnat tot crate 
+            clsEmployee AnEmployee = new clsEmployee();
+            // boolean variable to store the validation 
+            Boolean Found = false;
+            // create some test datra to use with the mehtod 
+            Int32 EmployeeNo = 1;
+            // invoke the method
+            Found = AnEmployee.Find(EmployeeNo);
+            // test to see tyhay the result ius correct
+            Assert.IsTrue(Found);
+
+        }
 
         [TestMethod]
 
@@ -106,5 +121,13 @@ namespace Testing
 
 
     }
+
+
+
+
+
+
+
+
 
 }
