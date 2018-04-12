@@ -99,6 +99,9 @@ namespace CarClassLibrary
                 mThisCar = value;
             }
         }
+
+        public clsMaintenance ThisMaitenance { get; set; }
+
         public int Add()
         {
             //Add a new record to the database based on the value thisCar
