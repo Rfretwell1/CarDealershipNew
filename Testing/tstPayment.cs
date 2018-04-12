@@ -18,6 +18,19 @@ namespace tstPayment
         }
 
         [TestMethod]
+        public void ActivePropertyOk()
+        {
+            //create an instance of the class we want to create
+            clsMaintenance AnPayment = new clsMaintenance();
+            //create some test data to assign to the property
+            Boolean testData = true;
+            //assign the data to the property 
+            AnPayment.Active = testData;
+            //test to see that that two values are the same 
+            Assert.AreEqual(AnPayment.Active, testData);
+        }
+
+        [TestMethod]
         public void PaymentNoPropertyOK()
         {
             //create an instance of the class we want to create 
