@@ -7,104 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarClassLibrary", "CarClassLibrary\CarClassLibrary.csproj", "{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarBook2", "..\CarBook2\", "{4B4E6873-796F-4722-A09D-5425FDC7AE4B}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52621"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52621"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52621"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52621"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
-		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52621"
-		SlnRelativePath = "..\CarBook2\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarLotWebsite", "CarLotWebsite\", "{B875B12F-A0B8-40F9-A6F7-F53FE3717E8F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
@@ -126,6 +28,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarLotWebsite", "CarLotWebs
 		SlnRelativePath = "CarLotWebsite\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4} = {5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,10 +46,6 @@ Global
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2368C2-51F3-46DB-9C02-BF0C783FC2A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B4E6873-796F-4722-A09D-5425FDC7AE4B}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{B875B12F-A0B8-40F9-A6F7-F53FE3717E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B875B12F-A0B8-40F9-A6F7-F53FE3717E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B875B12F-A0B8-40F9-A6F7-F53FE3717E8F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
