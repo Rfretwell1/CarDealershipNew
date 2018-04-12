@@ -1,4 +1,54 @@
 ﻿<!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs)
+        ''            
+        ''Session["MaintenaceID"] = -1;
+        ''            Response.Redirect("anMaintenance")
+
+
+
+
+
+
+    End Sub
+
+    Protected Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+        ''Partial Public class_Maintenance : System.Web.UI.Page
+        ''{
+        ''//this funciton handles the load event
+        ''Protected void Page_load(Object sender, EventArgs e)
+
+        ''//if this Is the first time the page Is displayed 
+        ''If (IsPostBack == False) Then
+        ''                {
+        ''//update the list box
+        ''DisplayMaintenance();
+        ''}
+        ''}
+
+        ''void DisplayMaintenance()
+        ''{
+        ''//create the instance
+        ''class_libary.clsMaintenanceCollection Maintenance = New class_libary.clsMaintenance():  
+        ''//set the data source
+        ''lstMaintenance.DataSource = Maitanance.MaintanceList;
+        ''//set the name 
+        ''lstMaintnance.DataValueField = "MaintananceID";
+        ''//set the data field
+        ''lstMaintance.DataTextFeild = "Despcirtion"
+        ''//bind the data the list
+        ''lstMaintance.DataBind();
+        ''}
+
+
+
+
+
+    End Sub
+</script>
+
 <html>
 <head>
     <title>Maintenance Add
@@ -19,36 +69,10 @@
 </div>
 
     <div>
-        <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-
-        Public partial class_Maintenance : System.Web.UI.page
-        {
-        //this funciton handles the load event
-        protected void Page_load(object sender, EventArgs e)
-
-        //if this is the first time the page is displayed 
-        if (IsPostBack == false)
-        {
-        //update the list box
-        DisplayMaintenance();
-        }
-        }
-
-        void DisplayMaintenance()
-        {
-        //create the instance
-        class_libary.clsMaintenanceCollection Maintenance = new class_libary.clsMaintenance():
-        //set the data source
-        lstMaintenance.DataSource = Maitanance.MaintanceList;
-        //set the name 
-        lstMaintnance.DataValueField = "MaintananceID";
-        //set the data field
-        lstMaintance.DataTextFeild = "Despcirtion"
-        //bind the data the list
-        lstMaintance.DataBind();
-        }
+        <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged"></asp:ListBox>
 
 
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 
 
         <a style="color:white"><h1>Add Car to Maintenance</h1></a>

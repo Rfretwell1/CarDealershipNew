@@ -136,6 +136,50 @@ namespace tstMaintenance
         }
 
         [TestMethod]
+        public void UpdateMethodOk()
+        {
+
+            //create an instance of the class we want to create
+            clsCarCollection AllMainteance = new clsCarCollection();
+            //create the item of test data
+            clsMaintenance TestItem = new clsMaintenance();
+            //var to store the primary key
+            int PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.MaintenanceID = 1;
+            TestItem.Cost = 1;
+            TestItem.Date = DateTime.Now.Date;
+            TestItem.Description = "something";
+            TestItem.Repair = true;
+            //add the item
+            //set ThisCar to the test data
+            AllMainteance.ThisMaitenance = TestItem;
+            //add record 
+            PrimaryKey = AllMainteance.Add();
+            //set the pirmary key
+            TestItem.MaintenanceID = PrimaryKey;
+            //modify the test data 
+            TestItem.Active = true;
+            TestItem.MaintenanceID = 1;
+            TestItem.Cost = 1;
+            TestItem.Date = DateTime.Now.Date;
+            TestItem.Description = "something";
+            TestItem.Repair = true;
+            //set the reocrd 
+            AllMainteance.ThisMaitenance = TestItem;
+            //find the record
+            AllMainteance.Update();
+            //find the reocrd 
+            AllMainteance.ThisMaitenance.Find(PrimaryKey);
+            //test to see thismainatenace the test data
+            Assert.AreEqual(AllMainteance.ThisMaitenance, TestItem);
+
+
+        }
+
+        [TestMethod]
+
         public void AddMethodOk()
         {
 
@@ -165,9 +209,58 @@ namespace tstMaintenance
             Assert.AreEqual(AllMainteance.ThisMaitenance, TestItem);
 
         }
+        [TestMethod]
+        public void DeleteMethodOk()
+        {
+
+            //create an instance of the class we want to create
+            clsCarCollection AllMainteance = new clsCarCollection();
+            //create the item of test data
+            clsMaintenance TestItem = new clsMaintenance();
+            //var to store the primary key
+            int PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.MaintenanceID = 1;
+            TestItem.Cost = 1;
+            TestItem.Date = DateTime.Now.Date;
+            TestItem.Description = "something";
+            TestItem.Repair = true;
+            //add the item
+            //set ThisCar to the test data
+            AllMainteance.ThisMaitenance = TestItem;
+            //add the record
+            PrimaryKey = AllMainteance.Add();
+            //set the primary key of the test data
+            AllMainteance.ThisCar.Find(PrimaryKey);
+            //Delete
+            AllMainteance.Delete();
+            //now find the record
+            Boolean Found = AllMainteance.ThisMaitenance.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.IsFalse(Found);
+
+        }
+
+        //[TestMethod]
+        //public void FilterByDescriptionOk()
+        //{
+        //    //create an instance of the class
+        //    clsMaintenanceCollection AlMnt = new clsMaintenanceCollection();
+        //    //create an instance of the filter
+        //    clsMaintenanceCollection FilteredMaintenace = new clsMaintenanceCollection();
+        //    //apply the blank spring
+        //    FilteredMaintenace.FilterByDescription("");
+        //    //test to see if the two are the same 
+        //    Assert.AreEqual(AlMnt.count, FilteredMaintenace.count);
+
+
+        //}
+
+
 
         [TestMethod]
-        public void AllMaintenanceOk()
+        public void AllMaintenance()
         {
             
         }
