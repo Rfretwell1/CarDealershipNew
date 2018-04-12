@@ -50,7 +50,16 @@ namespace CarClassLibrary
 
 
 
-        public string Valid(string FirstName, string LastName, string Address, string PostCode, string DOB, string DateJoined, string EmailAddress, string PhoneNumber, string Jobtitle)
+
+        public bool Find(int EmployeeNo)
+        {
+            //set the private data menmeber to the test vslue
+            mEmployeeNo = 21;
+            // always return true
+            return true;
+        }
+
+        public string Valid(string firstName, string lastName, string address, string postCode, string dateJoined, string emailAddress, string phoneNumber, string Jobtitle)
         {
             //boolean flag to indictate that all is ok();
             string Error = "";
@@ -141,18 +150,6 @@ namespace CarClassLibrary
             }
             return Error;
         }
-
-        public bool Find(int EmployeeNo)
-        {
-            //set the private data menmeber to the test vslue
-            mEmployeeNo = 21;
-            // always return true
-            return true;
-        }
-
-      
-
-
     }
 }
 
