@@ -91,18 +91,18 @@ namespace tstMaintenance
         }
 
 
-        [TestMethod]
-        public void CountProertyOK()
-        {
-            //create an instance of the class we want to create 
-            clsMaintenanceCollection AllMnt = new clsMaintenanceCollection();
-            //Create some data to the propery 
-            Int32 SomeCount = 0;
-            //assign the data
-            AllMnt.count = SomeCount;
-            //test to see that the two value are the same
-            Assert.AreEqual(AllMnt.count, SomeCount);
-        }
+        //[TestMethod]
+        //public void CountProertyOK()
+        //{
+        //    //create an instance of the class we want to create 
+        //    clsMaintenanceCollection AllMnt = new clsMaintenanceCollection();
+        //    //Create some data to the propery 
+        //    Int32 SomeCount = 2;
+        //    //assign the data
+        //    AllMnt.count = SomeCount;
+        //    //test to see that the two value are the same
+        //    Assert.AreEqual(AllMnt.count, SomeCount);
+        //}
 
         [TestMethod]
         public void TwoRecordsPresent()
@@ -111,6 +111,58 @@ namespace tstMaintenance
             clsMaintenanceCollection AllMaintenance = new clsMaintenanceCollection();
             //test to see that two values are the same
             Assert.AreEqual(AllMaintenance.count, 2);
+
+        }
+
+        [TestMethod]
+        public void ThisMaintenancePropertyOk()
+        {
+            //create an instance of the class we want to create
+            clsCarCollection AllMaintenace = new clsCarCollection();
+            //create some test data to assign to the property
+            clsMaintenance TestMaitenance = new clsMaintenance();
+            //set the properties of the test object
+            TestMaitenance.Active = true;
+            TestMaitenance.MaintenanceID = 1;
+            TestMaitenance.Cost = 1;
+            TestMaitenance.Date = DateTime.Now.Date;
+            TestMaitenance.Description = "something";
+            TestMaitenance.Repair = true;
+            //assign the data to the property
+            AllMaintenace.ThisMaitenance = TestMaitenance;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllMaintenace.ThisMaitenance, TestMaitenance);
+
+        }
+
+        [TestMethod]
+        public void AddMethodOk()
+        {
+
+            //create an instance of the class we want to create
+            clsCarCollection AllMainteance = new clsCarCollection();
+            //create the item of test data
+            clsMaintenance TestItem = new clsMaintenance();
+            //var to store the primary key
+            int PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.MaintenanceID = 1;
+            TestItem.Cost = 1;
+            TestItem.Date = DateTime.Now.Date;
+            TestItem.Description = "something";
+            TestItem.Repair = true;
+            //add the item
+            //set ThisCar to the test data
+            AllMainteance.ThisMaitenance = TestItem;
+            //add the record
+            PrimaryKey = AllMainteance.Add();
+            //set the primary key of the test data
+            TestItem.MaintenanceID = PrimaryKey;
+            //find the record
+            AllMainteance.ThisCar.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.AreEqual(AllMainteance.ThisMaitenance, TestItem);
 
         }
 
