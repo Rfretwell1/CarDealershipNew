@@ -36,6 +36,7 @@ namespace CarClassLibrary
        
         
         public string Surname { get; set; }
+        public bool Active { get; set; }
 
         public bool Find(Int32 PaymentID)
         {
@@ -131,6 +132,7 @@ namespace CarClassLibrary
             //return any error messages 
             return Error; 
         }
+
     }
     
 }
