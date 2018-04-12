@@ -34,6 +34,7 @@ namespace Testing
             TestItem.EmployeeNo = 4375;
             TestItem.FirstName = "John";
             TestItem.LastName = "Make";
+            TestItem.DOB = DateTime.Now.Date;
             TestItem.Address = " 11 donald Road";
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.PostCode = " KT6 8RJ";
@@ -76,6 +77,7 @@ namespace Testing
             TestEmployee.EmployeeNo = 4375;
             TestEmployee.FirstName = "John";
             TestEmployee.LastName = "Make";
+            TestEmployee.DOB = DateTime.Now.Date;
             TestEmployee.Address = " 11 donald Road";
             TestEmployee.DateJoined = DateTime.Now.Date;
             TestEmployee.PostCode = " KT6 8RJ";
@@ -105,6 +107,7 @@ namespace Testing
             TestEmployee.EmployeeNo = 4375;
             TestEmployee.FirstName = "John";
             TestEmployee.LastName = "Make";
+            TestEmployee.DOB = DateTime.Now.Date;
             TestEmployee.Address = " 11 donald Road";
             TestEmployee.DateJoined = DateTime.Now.Date;
             TestEmployee.PostCode = " KT6 8RJ";
@@ -120,14 +123,35 @@ namespace Testing
 
 
 
+
+
+    [TestMethod]
+    public void AddMethodOK()
+    {
+            clsEmployeeCollection AllEmployees = new clsEmployeeCollection();
+            // create the item of test data
+            clsEmployee TestEmployee = new clsEmployee();
+            // var to store the primary key 
+            Int32 PrimaryKey = 0;
+            //set its propertys
+                 TestEmployee.Active = true;
+            TestEmployee.EmployeeNo = 4375;
+            TestEmployee.FirstName = "John";
+            TestEmployee.LastName = "Make";
+            TestEmployee.DOB = DateTime.Now.Date;
+            TestEmployee.Address = " 11 donald Road";
+            TestEmployee.DateJoined = DateTime.Now.Date;
+            TestEmployee.PostCode = " KT6 8RJ";
+            TestEmployee.EmailAddress = " JM@gmail.com";
+            TestEmployee.PostCode = "07838774833";
+            // set thius employee to test data 
+            AllEmployees.ThisEmployee = TestEmployee;
+            // add the record 
+       //     PrimaryKey = AllEmployees.Add();
+
+
+        }
     }
 
 
-
-
-
-
-
-
-
-}
+    }
