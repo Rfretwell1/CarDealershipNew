@@ -218,13 +218,33 @@ namespace CarClassLibrary
             return Error;
         }
 
-        public bool Find(int customerID)
+        public bool Find(int Customer)
         {
 
-            //set the private data member to the test data value
-            mCustomerID = 21;
-            //always return true
-            return true;
+            //create an instance
+            clsDataConnection DB = new clsDataConnection();
+            //add a parameter
+            DB.AddParameter("@CustomerID", CustomerID);
+            //if one record is found
+            if (DB.Count ==1)
+            {
+                //copy the data from the database to the member
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mAddress = Convert.ToString(DB.DataTable.Rows[0]["Address"]);
+                mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                mPhoneNumber = Convert.ToString(DB.DataTable.Rows[0]["PhoneNumber"]);
+                mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+
+                return true;
+            } 
+            //if no records found
+            else
+            {
+                return false;
+            }
         }
 
 
