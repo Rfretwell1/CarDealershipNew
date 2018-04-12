@@ -16,6 +16,8 @@ namespace CarClassLibrary
         List<clsEmployee> mEmployeeList = new List<clsEmployee>();
         // public property for count 
 
+        clsEmployee mThisEmployee = new clsEmployee();
+
 
         public List<clsEmployee> EmployeeList
         {
@@ -50,9 +52,20 @@ namespace CarClassLibrary
         }
 
 
-        public clsEmployee ThisEmployee { get; set; }
-
-
+        public clsEmployee ThisEmployee
+        {
+            get
+            {
+                // return the private data 
+                return mThisEmployee;
+            }
+             set
+            {
+                // set the private data 
+                mThisEmployee = value;
+            }
+        }
+  
 
 
         public clsEmployeeCollection()
@@ -77,6 +90,7 @@ namespace CarClassLibrary
                 AnEmployee.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
                 AnEmployee.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
                 AnEmployee.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                AnEmployee.DOB = Convert.ToDateTime(DB.DataTable.Rows[Index]["DOB"]);
                 AnEmployee.Address = Convert.ToString(DB.DataTable.Rows[Index]["Address"]);
                 AnEmployee.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["PostCode"]);
                 AnEmployee.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
@@ -90,7 +104,31 @@ namespace CarClassLibrary
                 Index++;
 
             }
+
         }
+
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values of thisAddress
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@FirstName", mThisEmployee.FirstName);
+            DB.AddParameter("@LastName", mThisEmployee.LastName);
+            DB.AddParameter("@DOB", mThisEmployee.DOB);
+            DB.AddParameter("@Address", mThisEmployee.Address);
+            DB.AddParameter("@PhoneNumber", mThisEmployee.PhoneNumber);
+            DB.AddParameter("@EmailAddress", mThisEmployee.EmailAddress);
+            DB.AddParameter("@Active", mThisEmployee.Active);
+            DB.AddParameter("@PostCode", mThisEmployee.PostCode);
+            DB.AddParameter("@JobTitle", mThisEmployee.JobTitle);
+            DB.AddParameter("@DateJoined", mThisEmployee.DateJoined);
+            DB.AddParameter("@Active", mThisEmployee.Active);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblAddress_Insert");
+        }
+
     }
 }
 

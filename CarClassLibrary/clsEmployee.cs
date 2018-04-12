@@ -11,6 +11,7 @@ namespace CarClassLibrary
 
         }
         public string FirstName { get; set; }
+        public DateTime DOB { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Employee { get; set; }
@@ -49,7 +50,7 @@ namespace CarClassLibrary
 
 
 
-        public string Valid(string FirstName, string LastName, string Address, string PostCode, string DateJoined, string EmailAddress, string PhoneNumber, string Jobtitle)
+        public string Valid(string FirstName, string LastName, string Address, string PostCode, string DOB, string DateJoined, string EmailAddress, string PhoneNumber, string Jobtitle)
         {
             //boolean flag to indictate that all is ok();
             string Error = "";
@@ -148,6 +149,10 @@ namespace CarClassLibrary
             // always return true
             return true;
         }
+
+      
+
+
     }
 }
 
