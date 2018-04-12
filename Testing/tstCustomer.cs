@@ -967,7 +967,7 @@ namespace Testing
             Int32 CustomerID = 21;
             Found = AnCustomer.Find(CustomerID);
             //test to see that the result is correct
-            Assert.IsTrue(Found);
+            Assert.IsFalse(Found);
         }
 
         [TestMethod]
@@ -984,7 +984,7 @@ namespace Testing
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the address number
-            if (AnCustomer.Active != true)
+            if (AnCustomer.Active != false)
             {
                 OK = false;
             }
@@ -1008,7 +1008,7 @@ namespace Testing
             //check the address number
             if (AnCustomer.CustomerID != 21)
             {
-                OK = false;
+                OK = true;
             }
             //test to see that the result is correct
             Assert.IsTrue(OK);
@@ -1030,12 +1030,12 @@ namespace Testing
                 //invoke the method
                 Found = AnCustomer.Find(CustomerID);
                 //check the address number
-                if (AnCustomer.DateAdded != Convert.ToDateTime("16/10/2017"))
+                if (AnCustomer.DateAdded != Convert.ToDateTime(DateTime.Now.Date))
                 {
                     OK = false;
                 }
                 //        //test to see that the result is correct
-                Assert.IsTrue(OK);
+                Assert.IsFalse(OK);
             }
         }
 
@@ -1059,7 +1059,7 @@ namespace Testing
                     OK = false;
                 }
                 //        //test to see that the result is correct
-                Assert.IsTrue(OK);
+                Assert.IsFalse(OK);
             }
         }
 
@@ -1083,7 +1083,7 @@ namespace Testing
                     OK = false;
                 }
                 //        //test to see that the result is correct
-                Assert.IsTrue(OK);
+                Assert.IsFalse(OK);
             }
 
         }
@@ -1108,7 +1108,7 @@ namespace Testing
                     OK = false;
                 }
                 //        //test to see that the result is correct
-                Assert.IsTrue(OK);
+                Assert.IsFalse(OK);
             }
         }
         [TestMethod]
@@ -1131,7 +1131,7 @@ namespace Testing
                     OK = false;
                 }
                 //        //test to see that the result is correct
-                Assert.IsTrue(OK);
+                Assert.IsFalse(OK);
             }
         }
     }
