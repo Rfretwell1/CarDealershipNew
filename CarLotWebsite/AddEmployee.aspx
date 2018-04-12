@@ -12,7 +12,7 @@
 <body>
     ​<header>
         <div class="header">
-            <img src="Images/ferrari.png" alt="logo" />
+            <img src="Images/ferrari.png" alt="logo" style="height: 186px; width: 259px" />
 
             <h1 class="head1"> Employee Portal </h1> <button class="logout">Log Out</button>
            
