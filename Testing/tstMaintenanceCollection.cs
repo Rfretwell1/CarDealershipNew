@@ -105,6 +105,16 @@ namespace tstMaintenance
         }
 
         [TestMethod]
+        public void TwoRecordsPresent()
+        {
+            //create an isntance of the class
+            clsMaintenanceCollection AllMaintenance = new clsMaintenanceCollection();
+            //test to see that two values are the same
+            Assert.AreEqual(AllMaintenance.count, 2);
+
+        }
+
+        [TestMethod]
         public void AllMaintenanceOk()
         {
             

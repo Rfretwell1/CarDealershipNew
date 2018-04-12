@@ -454,11 +454,11 @@ namespace tstMaintenance
             //boolean variable to store the seslut of the vaildation
             Boolean Found = false;
             //create some test data to use with the method 
-            Int32 MaintenanceID = 21;
+            Int32 MaintenanceID = 12;
             //invoke the method
             Found = anMaintenance.Find(MaintenanceID);
             //test to see that the result is correct
-            Assert.IsFalse(Found);
+            Assert.IsTrue(Found);
         }
 
         [TestMethod]
@@ -480,7 +480,7 @@ namespace tstMaintenance
                 Ok = false;
             }
             //test to see that the resuts is correct 
-            Assert.IsFalse(Ok);
+            Assert.IsTrue(Ok);
 
         }
 
@@ -594,7 +594,7 @@ namespace tstMaintenance
                 Ok = false;
             }
             //test to see that the resuts is correct 
-            Assert.IsFalse(Ok);
+            Assert.IsTrue(Ok);
 
         }
 
