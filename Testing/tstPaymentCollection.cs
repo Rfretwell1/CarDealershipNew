@@ -173,7 +173,7 @@ namespace Testing
             //set the primary key of the test data 
             TestItem.PaymentNo = PrimaryKey;
             //find the record 
-            AllPayments.ThisPayment.Find (PrimaryKey);
+            AllPayments.ThisPayment.Find(PrimaryKey);
             //test to see that two values are the same 
             Assert.AreEqual(AllPayments.ThisPayment, TestItem);
 

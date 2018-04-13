@@ -17,7 +17,7 @@
              <h1 class="head1"> Employee Portal </h1> 
              <h3> Welcome to your Personalised Employee Page  </h3>
               </div> 
-    <button class="logout">Log Out</button>  
+    <p><a href="LogIn.aspx"> <h2><button>LogOut</button></h2></a></p>
     
     </header>
     
@@ -30,7 +30,7 @@
                 <div class="container">
                     <h2>Add New Employee</h2>
                     <p>Click Below to add new Employee onto the system </p>
-                    <p> <button >go</button>  </p>
+                  <p><a href="AddEmployee.aspx"> <h2><button>Add New Employee</button></h2></a></p>
 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <div class="container">
                     <h2>Search for employee</h2>
                     <p> click here to search for an employee</p>
-                    <p><button class="button">go</button></p>
+                   <p><a href="Search.aspx"> <h2><button>Search</button></h2></a></p>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                             where you will be able to view
                             and amend your personal information
                         </p>
-                        <p><button class="button">go</button></p>
+                         <p><a href="PersonalProfile.aspx"> <h2><button>Go</button></h2></a></p>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                 <img src="Images/report1.jpg"  style="width:14%; height: 118px;">
                 <div class="container">
                     <h2>Reports </h2>
-                    <p><button class="button">go</button></p>
+                    <p><a href="Reports.aspx"> <h2><button>Reports</button></h2></a></p>
                 </div>
             </div>
         </div>

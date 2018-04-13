@@ -5,58 +5,173 @@ namespace CarClassLibrary
     public class clsEmployee
     { // private data member for the employeee number 
         private Int32 mEmployeeNo;
+        private bool mActive;
+        private string mFirstName;
+        private string mLastName;  
+        private string mAddress;
+        private DateTime mDateJoined;
+        private string mPostCode;
+        private string mEmailAddress;
+        private string mJobTitle;
+        private string mPhoneNumber;
 
-        public clsEmployee()
+      
+        public string FirstName
         {
-
+            get
+            {
+                return mFirstName;
+            }
+            set
+            {
+                mFirstName = value;
+            }
         }
-        public string FirstName { get; set; }
-        public DateTime DOB { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
+
+        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return mLastName;
+            }
+            set
+            {
+                mLastName = value;
+            }
+        }
+
+
+        public string Address
+        {
+            get
+            {
+                return mAddress;
+            }
+            set
+            {
+                mAddress = value;
+            }
+        }
+
+
+
+        public int EmployeeNo
+        {
+            get
+            {
+                return mEmployeeNo;
+            }
+            set
+            {
+                mEmployeeNo = value;
+            }
+        }
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+            set
+            {
+                mActive = value;
+            }
+        }
+        public DateTime DateJoined
+        {
+            get
+            {
+                return mDateJoined;
+            }
+            set
+            {
+                mDateJoined = value;
+            }
+        }
+        public string EmailAddress
+        {
+            get
+            {
+                return mEmailAddress;
+            }
+            set
+            {
+                mEmailAddress = value;
+            }
+        }
+        public string JobTitle
+        {
+            get
+            {
+                return mJobTitle;
+            }
+            set
+            {
+                mJobTitle = value;
+            }
+        }
+        public string PhoneNumber
+        {
+            get
+            {
+                return mPhoneNumber;
+            }
+            set
+            {
+                mPhoneNumber = value;
+            }
+        }
+
+        public string PostCode
+        {
+            get
+            {
+                return mPostCode;
+            }
+            set
+            {
+                mPostCode = value;
+            }
+        }
+
         public string Employee { get; set; }
-        public int EmployeeNo { get; set; }
-        public bool Active { get; set; }
-        public DateTime DateJoined { get; set; }
-        public string EmailAddress { get; set; }
-        public string JobTitle { get; set; }
-        public string PhoneNumber { get; set; }
-        public string PostCode { get; set; }
-
-
-
-
-
-        public Boolean Valid(string FirstName)
-        {
-            // var to record ant error found in the county nme asumming all is ok 
-            Boolean OK = true;
-            // test to tsee if the county a zero characters 
-            if (FirstName.Length == 0)
-            {
-                // set ol to false 
-                OK = false;
-            }
-            // test to see that the string sis more tha 20 characters 
-            if (FirstName.Length > 20)
-            {
-                //set ok to false 
-                OK = false;
-            }
-            // return results of all tests 
-            return OK;
-
-        }
-
-
-
 
         public bool Find(int EmployeeNo)
         {
-            //set the private data menmeber to the test vslue
-            mEmployeeNo = 21;
-            // always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the address no to search for
+            DB.AddParameter("@EmployeeNo", EmployeeNo);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_FilterByEmployeeNo");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+               mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mAddress = Convert.ToString(DB.DataTable.Rows[0]["Address"]);
+               mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                mDateJoined = Convert.ToDateTime(DB.DataTable.Rows[0]["DateJoined"]);
+                mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                mJobTitle = Convert.ToString(DB.DataTable.Rows[0]["JobTitle"]);
+                mEmployeeNo = Convert.ToInt32(DB.DataTable.Rows[0]["EmployeeNo"]);
+                mPhoneNumber = Convert.ToString(DB.DataTable.Rows[0]["PhoneNumber"]);
+                //return that everything worked OK
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
 
         public string Valid(string firstName, string lastName, string address, string postCode, string dateJoined, string emailAddress, string phoneNumber, string Jobtitle)
@@ -150,7 +265,13 @@ namespace CarClassLibrary
             }
             return Error;
         }
+
+        public bool Valid(string someText)
+        {
+            throw new NotImplementedException();
+        }
     }
+
 }
 
 

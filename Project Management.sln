@@ -27,10 +27,30 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarBook2", "..\CarBook2\", 
 		VWDPort = "52621"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52621"
+		Debug.AspNetCompiler.PhysicalPath = "..\CarBook2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52621"
+		Release.AspNetCompiler.PhysicalPath = "..\CarBook2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52621\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52621"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarLotWebsite", "CarLotWebsite\", "{B875B12F-A0B8-40F9-A6F7-F53FE3717E8F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{5e2368c2-51f3-46db-9c02-bf0c783fc2a4}|CarClassLibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_55733"
 		Debug.AspNetCompiler.PhysicalPath = "CarLotWebsite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55733\"
