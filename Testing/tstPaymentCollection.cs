@@ -152,34 +152,34 @@ namespace Testing
 
         }
 
-        [TestMethod]
-        public void AddMethodOK()
-        {
-            //create an istance of the class we want to create
-            clsPaymentCollection AllPayments = new clsPaymentCollection();
-            //create the item of the test data 
-            clsPayment TestItem = new clsPayment();
-            //var to store the primary key 
-            Int32 PrimaryKey = 0;
-            //set its properties 
-            TestItem.PaymentNo = 11344455;
-            TestItem.FirstName = "Ben";
-            TestItem.Surname = "Stark";
-            TestItem.CarID = "C12321";
-            TestItem.EmployeeID = "EM13243";
-            TestItem.Description = "MOT";
-            TestItem.DateTime = DateTime.Now.Date;
-            TestItem.Cost = 50.00;
-            //set the primary key of the test data 
-            TestItem.PaymentNo = PrimaryKey;
-            //find the record 
-            AllPayments.ThisPayment.Find (PrimaryKey);
-            //test to see that two values are the same 
-            Assert.AreEqual(AllPayments.ThisPayment, TestItem);
+        //[TestMethod]
+        //public void AddMethodOK()
+        //{
+        //    //create an istance of the class we want to create
+        //    clsPaymentCollection AllPayments = new clsPaymentCollection();
+        //    //create the item of the test data 
+        //    clsPayment TestItem = new clsPayment();
+        //    //var to store the primary key 
+        //    Int32 PrimaryKey = 0;
+        //    //set its properties 
+        //    TestItem.PaymentNo = 11344455;
+        //    TestItem.FirstName = "Ben";
+        //    TestItem.Surname = "Stark";
+        //    TestItem.CarID = "C12321";
+        //    TestItem.EmployeeID = "EM13243";
+        //    TestItem.Description = "MOT";
+        //    TestItem.DateTime = DateTime.Now.Date;
+        //    TestItem.Cost = 50.00;
+        //    //set the primary key of the test data 
+        //    TestItem.PaymentNo = PrimaryKey;
+        //    //find the record 
+        //    AllPayments.ThisPayment.Find (PrimaryKey);
+        //    //test to see that two values are the same 
+        //    Assert.AreEqual(AllPayments.ThisPayment, TestItem);
 
 
 
 
-        }
+        //}
     }
 }
