@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CarBook.master.cs" Inherits="CarBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+       <<div id="MainHomePage">
+        <div class="btn-group">
+            <p><a href="HomePage.aspx"><h2> <button>HomePage</button></h2></a></p>
+            <p><a href="Login.aspx"><h2><button>Login</button></h2></a></p>
+            <p><a href="Cars.aspx"><h2> <button>Cars</button></h2></a></p>
+            <p><a href="Maitenance.aspx"><h2><button>Maintenance</button></h2></a></p>
+            <p><a href="Payment.aspx"> <h2><button>Payment</button></h2></a></p>
+        </div>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
