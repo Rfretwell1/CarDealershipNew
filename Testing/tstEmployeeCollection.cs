@@ -34,7 +34,7 @@ namespace Testing
             TestItem.EmployeeNo = 4375;
             TestItem.FirstName = "John";
             TestItem.LastName = "Make";
-            TestItem.DOB = DateTime.Now.Date;
+          
             TestItem.Address = " 11 donald Road";
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.PostCode = " KT6 8RJ";
@@ -77,7 +77,7 @@ namespace Testing
             TestEmployee.EmployeeNo = 4375;
             TestEmployee.FirstName = "John";
             TestEmployee.LastName = "Make";
-            TestEmployee.DOB = DateTime.Now.Date;
+          
             TestEmployee.Address = " 11 donald Road";
             TestEmployee.DateJoined = DateTime.Now.Date;
             TestEmployee.PostCode = " KT6 8RJ";
@@ -107,7 +107,7 @@ namespace Testing
             TestEmployee.EmployeeNo = 4375;
             TestEmployee.FirstName = "John";
             TestEmployee.LastName = "Make";
-            TestEmployee.DOB = DateTime.Now.Date;
+        
             TestEmployee.Address = " 11 donald Road";
             TestEmployee.DateJoined = DateTime.Now.Date;
             TestEmployee.PostCode = " KT6 8RJ";
@@ -138,7 +138,7 @@ namespace Testing
             TestEmployee.EmployeeNo = 4375;
             TestEmployee.FirstName = "John";
             TestEmployee.LastName = "Make";
-            TestEmployee.DOB = DateTime.Now.Date;
+            
             TestEmployee.Address = " 11 donald Road";
             TestEmployee.DateJoined = DateTime.Now.Date;
             TestEmployee.PostCode = " KT6 8RJ";

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CarClassLibrary;
+
 
 public partial class Report : System.Web.UI.Page
 {
@@ -22,6 +24,20 @@ public partial class Report : System.Web.UI.Page
 
     void DisplayEmployee()
     {
-       
+        {
+            //create an instance of the County Collection
+            CarClassLibrary.clsEmployeeCollection Employee = new CarClassLibrary.clsEmployeeCollection();
+            //set the data source to the list of counties in the collection
+            lstEmployees.DataSource = Employee.EmployeeList;
+            //set the name of the primary key
+            lstEmployees.DataValueField = "AddressNo";
+            //set the data field to display
+            lstEmployees.DataTextField = "PostCode";
+            //bind the data to the list
+            lstEmployees.DataBind();
+        }
+
     }
+
+
 }
